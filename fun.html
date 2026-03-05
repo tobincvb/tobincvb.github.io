@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun | Tobin Carlton Van Buizen</title>
+
+    <style>
+        /* === BASE STYLES === */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --bg-color: #fcfcfc;
+            --nav-bg: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1a5276;
+            text-decoration: underline;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* === HEADER === */
+        .page-header {
+            background-color: var(--primary-color);
+            background-image: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* === MAIN CONTENT === */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* === FUN SECTIONS === */
+        .fun-section {
+            margin-bottom: 60px;
+        }
+
+        .fun-section img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+
+        .fun-section p {
+            font-size: 1.15rem;
+            margin-bottom: 20px;
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--nav-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Tobin CVB</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research / Publications</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="fun.html" class="active">Fun</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Fun</h1>
+    </header>
+
+    <main class="container">
+
+        <div class="fun-section">
+            <img src="tattoo.jpg" alt="Tattoo of the Universal Coefficient Theorem">
+            
+            <p>I have a tattoo of the Universal Coefficient Theorem (for cohomology) from algebraic topology. Very roughly, it's a result that tells you how different kinds of information about a space fit together.</p>
+            
+            <p>For me, it's a reminder that complicated things often decompose into simpler pieces in maths and in life. It also makes for fun conversations when someone asks, "Wait... is that <em>maths</em> on your arm?"</p>
+        </div>
+
+        <div class="fun-section">
+            <img src="powerlifting.jpg" alt="Tobin deadlifting at a powerlifting competition">
+            
+            <p>I compete in powerlifting, which means I train the squat, bench press and deadlift with the goal of lifting as much weight as I can on the platform. I love it because progress is brutally honest: either the bar moves or it doesn't.</p>
+            
+            <p>Training has been a big lesson in consistency, patience, and working with the body I have on any given day. It's also a really nice counterbalance to long stretches of thinking at a whiteboard.</p>
+            
+            <p>Powerlifting has also taught me a lot about adapting training around fatigue, health, and real life; it's one of the ways I look after both my body and brain.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tobin Carlton Van Buizen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
