@@ -5,63 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talks | Tobin Carlton Van Buizen</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
         /* === BASE STYLES === */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #2980b9;
-            --text-color: #333;
-            --bg-color: #fcfcfc;
-            --nav-bg: #ffffff;
-            --border-color: #eaeaea;
+            --bg-color: #f8fafc;
+            --text-main: #334155;
+            --heading-color: #0f172a;
+            --accent-color: #0284c7;
+            --accent-hover: #0369a1;
+            --nav-bg: rgba(255, 255, 255, 0.95);
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Merriweather', serif;
+            color: var(--heading-color);
         }
 
         a {
             color: var(--accent-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease-in-out;
         }
 
         a:hover {
-            color: #1a5276;
+            color: var(--accent-hover);
             text-decoration: underline;
         }
 
         /* === NAVIGATION === */
         nav {
             background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .nav-container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 18px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo:hover {
+            text-decoration: none;
+            color: var(--accent-color);
         }
 
         .nav-links {
@@ -69,92 +86,98 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links li a {
-            color: var(--secondary-color);
+            color: var(--text-main);
+            font-size: 0.95rem;
             font-weight: 500;
+            text-decoration: none;
         }
 
         .nav-links li a:hover, .nav-links li a.active {
             color: var(--accent-color);
-            text-decoration: none;
         }
 
-        /* === HEADER === */
+        /* === PAGE HEADER === */
         .page-header {
-            background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('banner.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 60px auto 40px auto;
+            padding: 0 20px;
             text-align: center;
         }
 
         .page-header h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
             margin: 0;
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 1px;
         }
 
-        /* === MAIN CONTENT (SIDE-BY-SIDE LAYOUT) === */
+        /* === TALKS CARD (Side-by-side) === */
         .container {
-            max-width: 900px;
-            margin: 40px auto;
+            max-width: 1000px;
+            margin: 0 auto 60px auto;
             padding: 0 20px;
+        }
+
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            padding: 40px;
             display: flex;
-            gap: 40px;
+            gap: 50px;
             align-items: flex-start;
         }
 
         .side-img {
-            width: 300px;
+            width: 350px;
             flex-shrink: 0;
             border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            height: auto;
+            object-fit: cover;
         }
 
-        .content {
+        .talks-list {
             flex: 1;
         }
 
-        /* === TALKS LIST === */
-        .talks-list p {
-            font-size: 1.15rem;
+        .talk-item {
+            font-size: 1.1rem;
             margin-top: 0;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
             padding-bottom: 20px;
-            border-bottom: 1px solid var(--border-color);
+            border-bottom: 1px solid #e2e8f0;
             line-height: 1.5;
+            color: var(--text-main);
         }
 
-        .talks-list p:last-child {
+        .talk-item:last-child {
             border-bottom: none;
             margin-bottom: 0;
             padding-bottom: 0;
         }
 
+        .talk-title {
+            font-weight: 600;
+            color: var(--heading-color);
+            display: block;
+            margin-bottom: 4px;
+        }
+
         /* === FOOTER === */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: var(--nav-bg);
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
+            padding: 30px 20px;
             font-size: 0.9rem;
-            color: #777;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
         }
 
         /* === RESPONSIVE DESIGN === */
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-                align-items: center;
-            }
             .nav-container {
                 flex-direction: column;
                 gap: 15px;
@@ -162,6 +185,12 @@
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .content-card {
+                flex-direction: column;
+                align-items: center;
+                padding: 30px;
+                gap: 30px;
             }
             .side-img {
                 width: 100%;
@@ -189,20 +218,36 @@
     </header>
 
     <main class="container">
+        <div class="content-card">
+            <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
 
-        <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
-
-        <div class="content">
             <div class="talks-list">
-                <p>Topological Hochschild Homology with a “Twist” — Honours Conference, ANU, 2025.11</p>
-                <p>What is... G-stuff? — What is...? Seminar, ANU, 2025.08</p>
-                <p>Odd Primary Hopf Invariant One — VBKT Seminar, ANU, 2025.06</p>
-                <p>The Scariest Maths Topics (in 8 minutes) — Maths in the Pub, 2025.05</p>
-                <p>Levy Integration — Stochastic Analysis & Financial Applications, 2024.11</p>
-                <p>\( C_2 \)-Equivariance and KR-Theory — Stable Homotopy Theory Seminar, ANU, 2024.06</p>
+                <div class="talk-item">
+                    <span class="talk-title">Topological Hochschild Homology with a “Twist”</span>
+                    Honours Conference, ANU, 2025.11
+                </div>
+                <div class="talk-item">
+                    <span class="talk-title">What is... G-stuff?</span>
+                    What is...? Seminar, ANU, 2025.08
+                </div>
+                <div class="talk-item">
+                    <span class="talk-title">Odd Primary Hopf Invariant One</span>
+                    VBKT Seminar, ANU, 2025.06
+                </div>
+                <div class="talk-item">
+                    <span class="talk-title">The Scariest Maths Topics (in 8 minutes)</span>
+                    Maths in the Pub, 2025.05
+                </div>
+                <div class="talk-item">
+                    <span class="talk-title">Levy Integration</span>
+                    Stochastic Analysis & Financial Applications, 2024.11
+                </div>
+                <div class="talk-item">
+                    <span class="talk-title">\( C_2 \)-Equivariance and KR-Theory</span>
+                    Stable Homotopy Theory Seminar, ANU, 2024.06
+                </div>
             </div>
         </div>
-
     </main>
 
     <footer>
