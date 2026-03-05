@@ -80,9 +80,13 @@
 
         /* === HERO SECTION === */
         .hero {
-            background-color: var(--primary-color);
+            /* This creates a semi-transparent dark overlay over your background image */
+            background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
