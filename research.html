@@ -5,63 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Research Projects | Tobin Carlton Van Buizen</title>
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        /* === BASE STYLES === */
+        /* === BASE STYLES & COLOR PALETTE === */
         :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #34495e;
-            --accent-color: #2980b9;
-            --text-color: #333;
-            --bg-color: #fcfcfc;
-            --nav-bg: #ffffff;
-            --border-color: #eaeaea;
+            --bg-color: #f8fafc;
+            --text-main: #334155;
+            --heading-color: #0f172a;
+            --accent-color: #0284c7;
+            --accent-hover: #0369a1;
+            --nav-bg: rgba(255, 255, 255, 0.95);
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.7;
+            color: var(--text-main);
             background-color: var(--bg-color);
             margin: 0;
             padding: 0;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, .logo {
+            font-family: 'Merriweather', serif;
+            color: var(--heading-color);
         }
 
         a {
             color: var(--accent-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            transition: color 0.2s ease-in-out;
         }
 
         a:hover {
-            color: #1a5276;
+            color: var(--accent-hover);
             text-decoration: underline;
         }
 
         /* === NAVIGATION === */
         nav {
             background-color: var(--nav-bg);
-            border-bottom: 1px solid var(--border-color);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e2e8f0;
             position: sticky;
             top: 0;
             z-index: 100;
         }
 
         .nav-container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 18px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: var(--primary-color);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--heading-color);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo:hover {
+            text-decoration: none;
+            color: var(--accent-color);
         }
 
         .nav-links {
@@ -69,77 +86,92 @@
             margin: 0;
             padding: 0;
             display: flex;
-            gap: 20px;
+            gap: 25px;
         }
 
         .nav-links li a {
-            color: var(--secondary-color);
+            color: var(--text-main);
+            font-size: 0.95rem;
             font-weight: 500;
+            text-decoration: none;
         }
 
         .nav-links li a:hover, .nav-links li a.active {
             color: var(--accent-color);
-            text-decoration: none;
         }
 
-        /* === HEADER === */
+        /* === PAGE HEADER === */
         .page-header {
-            background-color: var(--primary-color);
-            background-image: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
-            color: white;
-            padding: 60px 20px;
+            max-width: 1000px;
+            margin: 60px auto 40px auto;
+            padding: 0 20px;
             text-align: center;
         }
 
         .page-header h1 {
+            font-size: 2.5rem;
+            letter-spacing: -1px;
             margin: 0;
-            font-size: 3rem;
-            font-weight: 300;
-            letter-spacing: 1px;
         }
 
-        /* === MAIN CONTENT === */
+        /* === RESEARCH CARDS === */
         .container {
-            max-width: 800px;
-            margin: 40px auto;
+            max-width: 900px;
+            margin: 0 auto 60px auto;
             padding: 0 20px;
         }
 
-        /* === PROJECT ENTRIES === */
-        .project {
-            margin-bottom: 50px;
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            border: 1px solid #f1f5f9;
+            padding: 35px 40px;
+            margin-bottom: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
-        .project h2 {
-            font-size: 1.2rem;
-            font-weight: normal;
-            color: var(--text-color);
-            margin-bottom: 15px;
+        .project-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+        }
+
+        .project-card h2 {
+            font-size: 1.3rem;
+            margin-top: 0;
+            margin-bottom: 10px;
             line-height: 1.4;
         }
 
-        .project h2 strong {
-            font-weight: bold;
+        .project-card h2 strong {
+            color: var(--accent-color);
         }
 
-        .project p {
+        .project-meta {
+            font-size: 0.95rem;
+            color: #64748b;
             margin-bottom: 15px;
-            font-size: 1.1rem;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
         }
 
-        .project .meta {
-            margin-bottom: 20px;
+        .project-card p {
+            font-size: 1.05rem;
+            margin-bottom: 0;
+        }
+
+        .project-card p + p {
+            margin-top: 15px;
         }
 
         /* === FOOTER === */
         footer {
             text-align: center;
-            padding: 20px;
-            background-color: var(--nav-bg);
-            border-top: 1px solid var(--border-color);
-            margin-top: 40px;
+            padding: 30px 20px;
             font-size: 0.9rem;
-            color: #777;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            margin-top: auto;
         }
 
         /* === RESPONSIVE DESIGN === */
@@ -151,6 +183,9 @@
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .project-card {
+                padding: 25px;
             }
         }
     </style>
@@ -170,39 +205,49 @@
     </nav>
 
     <header class="page-header">
-        <h1>Research<br>Projects</h1>
+        <h1>Research Projects</h1>
     </header>
 
     <main class="container">
 
-        <div class="project">
+        <div class="project-card">
             <h2><strong>Twisted Topological Hochschild Homology</strong>, Australian National University, 2025.01 - 2025.11</h2>
-            <p class="meta">Supervised by: Dr. Vigleik Angeltveit.<br>Available <a href="#">here</a>.</p>
-            <p>We consider a twisted version of topological Hochschild homology for \( C_n \)-ring spectra. For computing counit-unit composites, we use an original choice of coset representatives \( \{e, \gamma^n, \gamma^{2n}, \dots, \gamma^{(p-1)n}\} \) for \( C_{p^kn}/C_{p^{k-1}n} \) which yields the identity after restriction, mirroring the triangle identity, making this the "categorical" choice. For \( H \subset G \), we prove that there is an identification between the twisted cyclic bar construction for \( G \) of a norm from \( H \) and the subdivided twisted cyclic bar construction for \( H \): \( i_H^G B_\bullet^{cy,G}(N_H^G R) = sd_m B_\bullet^{cy,H}(R) \). Finally, we propose a definition of \( C_n \)-twisted \( TC_{C_n} \) and prove that this definition can be identified with a homotopy equaliser.</p>
+            <div class="project-meta">
+                Supervised by: Dr. Vigleik Angeltveit. | Available <a href="#">here</a>.
+            </div>
+            <p>We consider a twisted version of topological Hochschild homology for \( C_n \)-ring spectra. For computing counit-unit composites, we use an original choice of coset representatives \( \{e, \gamma^n, \gamma^{2n}, \dots, \gamma^{(p-1)n}\} \) for \( C_{p^kn}/C_{p^{k-1}n} \) which yields the identity after restriction, mirroring the triangle identity, making this the "categorical" choice.</p>
+            <p>For \( H \subset G \), we prove that there is an identification between the twisted cyclic bar construction for \( G \) of a norm from \( H \) and the subdivided twisted cyclic bar construction for \( H \): \( i_H^G B_\bullet^{cy,G}(N_H^G R) = sd_m B_\bullet^{cy,H}(R) \). Finally, we propose a definition of \( C_n \)-twisted \( TC_{C_n} \) and prove that this definition can be identified with a homotopy equaliser.</p>
         </div>
 
-        <div class="project">
+        <div class="project-card">
             <h2><strong>Odd Primary Hopf Invariant One</strong>, Australian National University, 2025.02 - 2025.06</h2>
-            <p class="meta">Supervised by: Dr. Vigleik Angeltveit.<br>Available <a href="#">here</a>.</p>
+            <div class="project-meta">
+                Supervised by: Dr. Vigleik Angeltveit. | Available <a href="#">here</a>.
+            </div>
             <p>Survey odd-primary refinements and constraints on Hopf invariant one.</p>
         </div>
 
-        <div class="project">
+        <div class="project-card">
             <h2><strong>Levy Integration</strong>, Australian National University, 2024.08 - 2024.11</h2>
-            <p class="meta">Supervised by: AsPr. Pierre Portal. Joint with: Kevin Zhou. Available <a href="#">here</a>.</p>
-            <p>Construct Levy-Ito integration for general Levy processes and compare with Ito integration.</p>
-            <p>Worked examples for compound Poisson and variance-gamma processes.</p>
+            <div class="project-meta">
+                Supervised by: AsPr. Pierre Portal. Joint with: Kevin Zhou. | Available <a href="#">here</a>.
+            </div>
+            <p>Construct Levy-Ito integration for general Levy processes and compare with Ito integration. Worked examples for compound Poisson and variance-gamma processes.</p>
         </div>
 
-        <div class="project">
+        <div class="project-card">
             <h2><strong>Applications of Differential Forms to Homotopy Theory</strong>, Australian National University, 2024.08 - 2024.11</h2>
-            <p class="meta">Supervised by: Dr. Anand Deopurkar.<br>Available <a href="#">here</a>.</p>
+            <div class="project-meta">
+                Supervised by: Dr. Anand Deopurkar. | Available <a href="#">here</a>.
+            </div>
             <p>Survey rational homotopy theory and differential graded algebras.</p>
         </div>
 
-        <div class="project">
+        <div class="project-card">
             <h2><strong>Kervaire Invariant One: \( C_2 \)-Equivariance and KR-Theory</strong>, Australian National University, 2024.02 - 2024.06</h2>
-            <p class="meta">Supervised by: Dr. Vigleik Angeltveit.<br>Available <a href="#">here</a>.</p>
+            <div class="project-meta">
+                Supervised by: Dr. Vigleik Angeltveit. | Available <a href="#">here</a>.
+            </div>
             <p>Expository project connecting \( C_2 \)-equivariant techniques to the Hill-Hopkins-Ravenel approach.</p>
         </div>
 
