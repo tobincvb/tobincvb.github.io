@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talks | Tobin Carlton Van Buizen</title>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        /* === BASE STYLES === */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #2980b9;
+            --text-color: #333;
+            --bg-color: #fcfcfc;
+            --nav-bg: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #1a5276;
+            text-decoration: underline;
+        }
+
+        /* === NAVIGATION === */
+        nav {
+            background-color: var(--nav-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+
+        .nav-links li a:hover, .nav-links li a.active {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        /* === HEADER === */
+        .page-header {
+            background-color: var(--primary-color);
+            background-image: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .page-header h1 {
+            margin: 0;
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        /* === MAIN CONTENT === */
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* === IMAGE STYLING === */
+        .talks-img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            display: block;
+            margin: 0 auto 50px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        /* === TALKS LIST === */
+        .talks-list {
+            margin-top: 20px;
+        }
+
+        .talks-list p {
+            font-size: 1.15rem;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            line-height: 1.5;
+        }
+
+        /* Remove border from the very last item */
+        .talks-list p:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        /* === FOOTER === */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--nav-bg);
+            border-top: 1px solid var(--border-color);
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+
+        /* === RESPONSIVE DESIGN === */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Tobin CVB</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="research.html">Research / Publications</a></li>
+                <li><a href="talks.html" class="active">Talks</a></li>
+                <li><a href="fun.html">Fun</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <h1>Talks</h1>
+    </header>
+
+    <main class="container">
+
+        <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="talks-img">
+
+        <div class="talks-list">
+            <p>Topological Hochschild Homology with a “Twist” — Honours Conference, ANU, 2025.11</p>
+            <p>What is... G-stuff? — What is...? Seminar, ANU, 2025.08</p>
+            <p>Odd Primary Hopf Invariant One — VBKT Seminar, ANU, 2025.06</p>
+            <p>The Scariest Maths Topics (in 8 minutes) — Maths in the Pub, 2025.05</p>
+            <p>Levy Integration — Stochastic Analysis & Financial Applications, 2024.11</p>
+            <p>\( C_2 \)-Equivariance and KR-Theory — Stable Homotopy Theory Seminar, ANU, 2024.06</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Tobin Carlton Van Buizen. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
