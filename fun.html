@@ -81,10 +81,12 @@
 
         /* === HEADER === */
         .page-header {
-            background-color: var(--primary-color);
-            background-image: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -97,26 +99,34 @@
 
         /* === MAIN CONTENT === */
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
         }
 
-        /* === FUN SECTIONS === */
+        /* === FUN SECTIONS (SIDE-BY-SIDE) === */
         .fun-section {
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
             margin-bottom: 60px;
         }
 
         .fun-section img {
-            width: 100%;
+            width: 300px;
+            flex-shrink: 0;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-            margin-bottom: 25px;
         }
 
-        .fun-section p {
+        .content {
+            flex: 1;
+        }
+
+        .content p {
             font-size: 1.15rem;
+            margin-top: 0;
             margin-bottom: 20px;
         }
 
@@ -140,6 +150,14 @@
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .fun-section {
+                flex-direction: column;
+                align-items: center;
+            }
+            .fun-section img {
+                width: 100%;
+                max-width: 400px;
             }
         }
     </style>
@@ -167,19 +185,20 @@
         <div class="fun-section">
             <img src="tattoo.jpg" alt="Tattoo of the Universal Coefficient Theorem">
             
-            <p>I have a tattoo of the Universal Coefficient Theorem (for cohomology) from algebraic topology. Very roughly, it's a result that tells you how different kinds of information about a space fit together.</p>
-            
-            <p>For me, it's a reminder that complicated things often decompose into simpler pieces in maths and in life. It also makes for fun conversations when someone asks, "Wait... is that <em>maths</em> on your arm?"</p>
+            <div class="content">
+                <p>I have a tattoo of the Universal Coefficient Theorem (for cohomology) from algebraic topology. Very roughly, it's a result that tells you how different kinds of information about a space fit together.</p>
+                <p>For me, it's a reminder that complicated things often decompose into simpler pieces in maths and in life. It also makes for fun conversations when someone asks, "Wait... is that <em>maths</em> on your arm?"</p>
+            </div>
         </div>
 
         <div class="fun-section">
             <img src="powerlifting.jpg" alt="Tobin deadlifting at a powerlifting competition">
             
-            <p>I compete in powerlifting, which means I train the squat, bench press and deadlift with the goal of lifting as much weight as I can on the platform. I love it because progress is brutally honest: either the bar moves or it doesn't.</p>
-            
-            <p>Training has been a big lesson in consistency, patience, and working with the body I have on any given day. It's also a really nice counterbalance to long stretches of thinking at a whiteboard.</p>
-            
-            <p>Powerlifting has also taught me a lot about adapting training around fatigue, health, and real life; it's one of the ways I look after both my body and brain.</p>
+            <div class="content">
+                <p>I compete in powerlifting, which means I train the squat, bench press and deadlift with the goal of lifting as much weight as I can on the platform. I love it because progress is brutally honest: either the bar moves or it doesn't.</p>
+                <p>Training has been a big lesson in consistency, patience, and working with the body I have on any given day. It's also a really nice counterbalance to long stretches of thinking at a whiteboard.</p>
+                <p>Powerlifting has also taught me a lot about adapting training around fatigue, health, and real life; it's one of the ways I look after both my body and brain.</p>
+            </div>
         </div>
 
     </main>
