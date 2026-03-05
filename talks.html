@@ -84,10 +84,12 @@
 
         /* === HEADER === */
         .page-header {
-            background-color: var(--primary-color);
-            background-image: linear-gradient(135deg, #2c3e50 0%, #34495e 50%, #2c3e50 100%);
+            background-image: linear-gradient(rgba(44, 62, 80, 0.75), rgba(44, 62, 80, 0.75)), url('banner.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
         }
 
@@ -98,38 +100,38 @@
             letter-spacing: 1px;
         }
 
-        /* === MAIN CONTENT === */
+        /* === MAIN CONTENT (SIDE-BY-SIDE LAYOUT) === */
         .container {
-            max-width: 800px;
+            max-width: 900px;
             margin: 40px auto;
             padding: 0 20px;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
         }
 
-        /* === IMAGE STYLING === */
-        .talks-img {
-            width: 100%;
-            max-width: 500px;
-            height: auto;
-            display: block;
-            margin: 0 auto 50px auto;
+        .side-img {
+            width: 300px;
+            flex-shrink: 0;
             border-radius: 8px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            height: auto;
+        }
+
+        .content {
+            flex: 1;
         }
 
         /* === TALKS LIST === */
-        .talks-list {
-            margin-top: 20px;
-        }
-
         .talks-list p {
             font-size: 1.15rem;
+            margin-top: 0;
             margin-bottom: 25px;
             padding-bottom: 20px;
             border-bottom: 1px solid var(--border-color);
             line-height: 1.5;
         }
 
-        /* Remove border from the very last item */
         .talks-list p:last-child {
             border-bottom: none;
             margin-bottom: 0;
@@ -149,6 +151,10 @@
 
         /* === RESPONSIVE DESIGN === */
         @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
             .nav-container {
                 flex-direction: column;
                 gap: 15px;
@@ -156,6 +162,10 @@
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
+            }
+            .side-img {
+                width: 100%;
+                max-width: 400px;
             }
         }
     </style>
@@ -180,15 +190,17 @@
 
     <main class="container">
 
-        <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="talks-img">
+        <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
 
-        <div class="talks-list">
-            <p>Topological Hochschild Homology with a “Twist” — Honours Conference, ANU, 2025.11</p>
-            <p>What is... G-stuff? — What is...? Seminar, ANU, 2025.08</p>
-            <p>Odd Primary Hopf Invariant One — VBKT Seminar, ANU, 2025.06</p>
-            <p>The Scariest Maths Topics (in 8 minutes) — Maths in the Pub, 2025.05</p>
-            <p>Levy Integration — Stochastic Analysis & Financial Applications, 2024.11</p>
-            <p>\( C_2 \)-Equivariance and KR-Theory — Stable Homotopy Theory Seminar, ANU, 2024.06</p>
+        <div class="content">
+            <div class="talks-list">
+                <p>Topological Hochschild Homology with a “Twist” — Honours Conference, ANU, 2025.11</p>
+                <p>What is... G-stuff? — What is...? Seminar, ANU, 2025.08</p>
+                <p>Odd Primary Hopf Invariant One — VBKT Seminar, ANU, 2025.06</p>
+                <p>The Scariest Maths Topics (in 8 minutes) — Maths in the Pub, 2025.05</p>
+                <p>Levy Integration — Stochastic Analysis & Financial Applications, 2024.11</p>
+                <p>\( C_2 \)-Equivariance and KR-Theory — Stable Homotopy Theory Seminar, ANU, 2024.06</p>
+            </div>
         </div>
 
     </main>
