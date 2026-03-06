@@ -114,7 +114,7 @@
             margin: 0;
         }
 
-        /* === TALKS CARD (Side-by-side) === */
+        /* === TALKS CARD === */
         .container {
             max-width: 1000px;
             margin: 0 auto 60px auto;
@@ -132,11 +132,20 @@
             align-items: flex-start;
         }
 
-        .side-img {
+        /* Update: Image Column for multiple photos */
+        .image-column {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
             width: 350px;
             flex-shrink: 0;
+        }
+
+        .side-img {
+            width: 100%;
             border-radius: 8px;
             object-fit: cover;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }
 
         .talks-list {
@@ -192,7 +201,7 @@
                 padding: 30px;
                 gap: 30px;
             }
-            .side-img {
+            .image-column {
                 width: 100%;
                 max-width: 400px;
             }
@@ -219,7 +228,11 @@
 
     <main class="container">
         <div class="content-card">
-            <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
+            
+            <div class="image-column">
+                <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
+                <img src="maths-talk.jpg" alt="Giving The Scariest Maths Topic talk at Maths in the Pub" class="side-img">
+            </div>
 
             <div class="talks-list">
                 <div class="talk-item">
@@ -247,6 +260,7 @@
                     Stable Homotopy Theory Seminar, ANU, 2024.06
                 </div>
             </div>
+            
         </div>
     </main>
 
