@@ -8,177 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* === BASE STYLES === */
-        :root {
-            --bg-color: #f8fafc;
-            --text-main: #334155;
-            --heading-color: #0f172a;
-            --accent-color: #0284c7;
-            --accent-hover: #0369a1;
-            --nav-bg: rgba(255, 255, 255, 0.95);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, .logo {
-            font-family: 'Merriweather', serif;
-            color: var(--heading-color);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-        }
-
-        /* === NAVIGATION === */
-        nav {
-            background-color: var(--nav-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--heading-color);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo:hover {
-            text-decoration: none;
-            color: var(--accent-color);
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links li a {
-            color: var(--text-main);
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .nav-links li a:hover, .nav-links li a.active {
-            color: var(--accent-color);
-        }
-
-        /* === PAGE HEADER === */
-        .page-header {
-            max-width: 1000px;
-            margin: 60px auto 40px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            margin: 0;
-        }
-
-        /* === FUN CARDS === */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto 60px auto;
-            padding: 0 20px;
-        }
-
-        .content-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f1f5f9;
-            padding: 40px;
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-            margin-bottom: 40px;
-        }
-
-        .side-img {
-            width: 350px;
-            flex-shrink: 0;
-            border-radius: 8px;
-            object-fit: cover;
-        }
-
-        .text-content {
-            flex: 1;
-        }
-
-        .text-content p {
-            font-size: 1.1rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-        }
-
-        /* === FOOTER === */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            margin-top: auto;
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .content-card {
-                flex-direction: column;
-                align-items: center;
-                padding: 30px;
-                gap: 30px;
-            }
-            .side-img {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -194,26 +25,30 @@
         </div>
     </nav>
 
-    <header class="page-header">
+    <header class="page-header container">
         <h1>Fun</h1>
     </header>
 
     <main class="container">
 
-        <div class="content-card">
-            <img src="tattoo.jpg" alt="Tattoo of the Universal Coefficient Theorem" class="side-img">
+        <div class="content-box columns">
+            <div class="col-side">
+                <img src="tattoo.jpg" alt="Tattoo of the Universal Coefficient Theorem" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            </div>
             
-            <div class="text-content">
-                <p>I have a tattoo of the Universal Coefficient Theorem (for cohomology) from algebraic topology. Very roughly, it's a result that tells you how different kinds of information about a space fit together.</p>
+            <div class="col-main">
+                <p style="margin-top: 0;">I have a tattoo of the Universal Coefficient Theorem (for cohomology) from algebraic topology. Very roughly, it's a result that tells you how different kinds of information about a space fit together.</p>
                 <p>For me, it's a reminder that complicated things often decompose into simpler pieces in maths and in life. It also makes for fun conversations when someone asks, "Wait... is that <em>maths</em> on your arm?"</p>
             </div>
         </div>
 
-        <div class="content-card">
-            <img src="powerlifting.jpg" alt="Tobin deadlifting at a powerlifting competition" class="side-img">
+        <div class="content-box columns">
+            <div class="col-side">
+                <img src="powerlifting.jpg" alt="Tobin deadlifting at a powerlifting competition" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+            </div>
             
-            <div class="text-content">
-                <p>I compete in powerlifting, which means I train the squat, bench press and deadlift with the goal of lifting as much weight as I can on the platform. I love it because progress is brutally honest: either the bar moves or it doesn't.</p>
+            <div class="col-main">
+                <p style="margin-top: 0;">I compete in powerlifting, which means I train the squat, bench press and deadlift with the goal of lifting as much weight as I can on the platform. I love it because progress is brutally honest: either the bar moves or it doesn't.</p>
                 <p>Training has been a big lesson in consistency, patience, and working with the body I have on any given day. It's also a really nice counterbalance to long stretches of thinking at a whiteboard.</p>
                 <p>Powerlifting has also taught me a lot about adapting training around fatigue, health, and real life; it's one of the ways I look after both my body and brain.</p>
             </div>
