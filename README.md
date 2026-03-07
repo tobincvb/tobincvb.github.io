@@ -35,3 +35,6 @@ To run this site locally, simply clone the repository and open `index.html` in a
 
 ```bash
 git clone [https://github.com/tobincvb/tobincvb.github.io](https://github.com/tobincvb/tobincvb.github.io)
+```
+## Contact
+I am currently open to discussing mathematics, research opportunities, or powerlifting. Feel free to reach out via [email](mailto:tobin.carltonvanbuizen@anu.edu.au).
