@@ -8,243 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-
-    <style>
-        /* === BASE STYLES & COLOR PALETTE === */
-        :root {
-            --bg-color: #f8fafc;
-            --text-main: #334155;
-            --heading-color: #0f172a;
-            --accent-color: #0284c7;
-            --accent-hover: #0369a1;
-            --nav-bg: rgba(255, 255, 255, 0.95);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, .logo {
-            font-family: 'Merriweather', serif;
-            color: var(--heading-color);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-        }
-
-        /* === NAVIGATION === */
-        nav {
-            background-color: var(--nav-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--heading-color);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo:hover {
-            text-decoration: none;
-            color: var(--accent-color);
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links li a {
-            color: var(--text-main);
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .nav-links li a:hover, .nav-links li a.active {
-            color: var(--accent-color);
-        }
-
-        /* === HERO SECTION (Side-by-Side) === */
-        .hero-container {
-            max-width: 1000px;
-            margin: 80px auto 60px auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            gap: 60px;
-        }
-
-        .hero-text {
-            flex: 1;
-        }
-
-        .hero-text h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-            margin-top: 0;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.2rem;
-            font-weight: 300;
-            color: var(--text-main);
-            margin-bottom: 30px;
-        }
-
-        .profile-img-container {
-            flex-shrink: 0;
-        }
-
-        .profile-img {
-            width: 320px;
-            height: 320px;
-            border-radius: 50%;
-            object-fit: cover;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            border: 4px solid white;
-        }
-
-        /* === ABOUT SECTION === */
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto 80px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f1f5f9;
-        }
-
-        .about-container h2 {
-            font-size: 1.8rem;
-            margin-top: 0;
-            border-bottom: 2px solid #e2e8f0;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .about-container p {
-            font-size: 1.1rem;
-            margin-bottom: 20px;
-        }
-
-        /* === BUTTONS === */
-        .button-group {
-            margin-top: 30px;
-            display: flex;
-            gap: 15px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 24px;
-            border-radius: 6px;
-            font-weight: 500;
-            text-decoration: none !important;
-            transition: all 0.2s ease;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: white !important;
-            border: 1px solid var(--accent-color);
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 6px rgba(2, 132, 199, 0.25);
-        }
-
-        .btn-secondary {
-            background-color: white;
-            color: var(--accent-color) !important;
-            border: 1px solid #cbd5e1;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-color);
-            background-color: #f0f9ff;
-            transform: translateY(-2px);
-        }
-
-        /* === FOOTER === */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            margin-top: auto;
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 768px) {
-            .hero-container {
-                flex-direction: column-reverse;
-                text-align: center;
-                gap: 30px;
-                margin-top: 40px;
-            }
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-            .profile-img {
-                width: 240px;
-                height: 240px;
-            }
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .button-group {
-                justify-content: center;
-                flex-direction: column;
-            }
-            .btn {
-                text-align: center;
-            }
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -260,32 +25,38 @@
         </div>
     </nav>
 
-    <header class="hero-container">
-        <div class="hero-text">
-            <h1>Tobin Carlton Van Buizen</h1>
-            <p class="subtitle">Mathematics First Class Honours and Statistics Graduate from the Australian National University.</p>
-            
-            <p><strong>Research interests:</strong> equivariant stable homotopy theory & THH/TC.</p>
-            <p><strong>Accelerated entry:</strong> commenced university at 15; completing Honours year at 20.</p>
-            
-            <div class="button-group">
-                <a href="academic-cv.pdf" class="btn btn-primary">Academic CV</a>
-                <a href="industry-cv.pdf" class="btn btn-secondary">Industry CV</a>
-            </div>
-        </div>
-        
-        <div class="profile-img-container">
-            <img src="profile.jpg" alt="Tobin Carlton Van Buizen" class="profile-img">
-        </div>
+    <header class="container page-header">
+        <h1>Tobin Carlton Van Buizen</h1>
+        <p>Mathematics First Class Honours and Statistics Graduate from the Australian National University.</p>
+        <p><strong>Research interests:</strong> equivariant stable homotopy theory & THH/TC.<br>
+        <strong>Accelerated entry:</strong> commenced university at 15; completing Honours year at 20.</p>
     </header>
 
-    <main class="about-container">
-        <h2>About Me</h2>
-        <p>Hi, I'm Tobin Carlton Van Buizen. I have an honours degree in mathematics and a degree in statistics, both from The Australian National University.</p>
-        
-        <p>I completed my honours degree in 2025 with First Class Honours under the supervision of <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank" rel="noopener">Dr. Vigleik Angeltveit</a> on equivariant stable homotopy theory, twisted topological Hochschild homology, and twisted topological cyclic homology. You can read my thesis, titled <em>'Twisted Topological Hochschild Homology'</em>, <a href="thesis.pdf">here</a>.</p>
-        
-        <p>You can reach me via email at <a href="mailto:tobin.carltonvanbuizen@anu.edu.au">tobin.carltonvanbuizen@anu.edu.au</a>.</p>
+    <main class="container columns">
+        <div class="col-main">
+            <div class="content-box">
+                <h2>About Me</h2>
+                <p>Hi, I'm Tobin. I completed my honours degree in 2025 with First Class Honours under the supervision of <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a>.</p>
+                
+                <h3 style="margin-top: 40px;">Curriculum Vitae</h3>
+                <p>You can view my academic CV below, or download a copy for your records.</p>
+                <a href="academic-cv.pdf" class="btn btn-primary" style="margin-bottom: 20px;">Download Academic CV</a>
+                
+                <div style="border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; margin-bottom: 20px;">
+                    <iframe src="academic-cv.pdf" width="100%" height="500px" style="border: none;"></iframe>
+                </div>
+
+                <div class="contact-box">
+                    <h3>Get in Touch</h3>
+                    <p>I am currently applying for PhD programs for a Fall 2026 start and am always open to discussing mathematics, research opportunities, or automated trading infrastructure.</p>
+                    <p><strong>Email:</strong> <a href="mailto:tobin.carltonvanbuizen@anu.edu.au">tobin.carltonvanbuizen@anu.edu.au</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-side">
+            <img src="profile.jpg" alt="Tobin Carlton Van Buizen" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        </div>
     </main>
 
     <footer>
