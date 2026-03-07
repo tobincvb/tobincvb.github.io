@@ -4,209 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Talks | Tobin Carlton Van Buizen</title>
-    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-
+    <link rel="stylesheet" href="style.css">
+    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-
-    <style>
-        /* === BASE STYLES === */
-        :root {
-            --bg-color: #f8fafc;
-            --text-main: #334155;
-            --heading-color: #0f172a;
-            --accent-color: #0284c7;
-            --accent-hover: #0369a1;
-            --nav-bg: rgba(255, 255, 255, 0.95);
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.7;
-            color: var(--text-main);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        h1, h2, h3, .logo {
-            font-family: 'Merriweather', serif;
-            color: var(--heading-color);
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-            transition: color 0.2s ease-in-out;
-        }
-
-        a:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-        }
-
-        /* === NAVIGATION === */
-        nav {
-            background-color: var(--nav-bg);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid #e2e8f0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 18px 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--heading-color);
-            text-decoration: none;
-            letter-spacing: -0.5px;
-        }
-
-        .logo:hover {
-            text-decoration: none;
-            color: var(--accent-color);
-        }
-
-        .nav-links {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links li a {
-            color: var(--text-main);
-            font-size: 0.95rem;
-            font-weight: 500;
-            text-decoration: none;
-        }
-
-        .nav-links li a:hover, .nav-links li a.active {
-            color: var(--accent-color);
-        }
-
-        /* === PAGE HEADER === */
-        .page-header {
-            max-width: 1000px;
-            margin: 60px auto 40px auto;
-            padding: 0 20px;
-            text-align: center;
-        }
-
-        .page-header h1 {
-            font-size: 2.5rem;
-            letter-spacing: -1px;
-            margin: 0;
-        }
-
-        /* === TALKS CARD === */
-        .container {
-            max-width: 1000px;
-            margin: 0 auto 60px auto;
-            padding: 0 20px;
-        }
-
-        .content-card {
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-            border: 1px solid #f1f5f9;
-            padding: 40px;
-            display: flex;
-            gap: 50px;
-            align-items: flex-start;
-        }
-
-        /* Update: Image Column for multiple photos */
-        .image-column {
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-            width: 350px;
-            flex-shrink: 0;
-        }
-
-        .side-img {
-            width: 100%;
-            border-radius: 8px;
-            object-fit: cover;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-        }
-
-        .talks-list {
-            flex: 1;
-        }
-
-        .talk-item {
-            font-size: 1.1rem;
-            margin-top: 0;
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #e2e8f0;
-            line-height: 1.5;
-            color: var(--text-main);
-        }
-
-        .talk-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        .talk-title {
-            font-weight: 600;
-            color: var(--heading-color);
-            display: block;
-            margin-bottom: 4px;
-        }
-
-        /* === FOOTER === */
-        footer {
-            text-align: center;
-            padding: 30px 20px;
-            font-size: 0.9rem;
-            color: #64748b;
-            border-top: 1px solid #e2e8f0;
-            margin-top: auto;
-        }
-
-        /* === RESPONSIVE DESIGN === */
-        @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 15px;
-            }
-            .nav-links {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .content-card {
-                flex-direction: column;
-                align-items: center;
-                padding: 30px;
-                gap: 30px;
-            }
-            .image-column {
-                width: 100%;
-                max-width: 400px;
-            }
-        }
-    </style>
 </head>
 <body>
 
@@ -222,46 +26,73 @@
         </div>
     </nav>
 
-    <header class="page-header">
+    <header class="page-header container">
         <h1>Talks</h1>
     </header>
 
-    <main class="container">
-        <div class="content-card">
-            
-            <div class="image-column">
-                <img src="whiteboard.jpg" alt="Writing math on a whiteboard" class="side-img">
-                <img src="maths-talk.jpg" alt="Giving The Scariest Maths Topic talk at Maths in the Pub" class="side-img">
+    <main class="container columns">
+        
+        <div class="col-side" style="display: flex; flex-direction: column; gap: 20px;">
+            <img src="whiteboard.jpg" alt="Writing math on a whiteboard" style="width: 100%; border-radius: 8px;">
+            <img src="maths-talk.jpg" alt="Giving a talk at Maths in the Pub" style="width: 100%; border-radius: 8px;">
+        </div>
+
+        <div class="col-main">
+            <div class="content-box">
+                <h2 class="project-title">Topological Hochschild Homology with a “Twist”</h2>
+                <div class="project-meta">Honours Conference, ANU, 2025.11</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract for the Honours Conference talk here...]</p>
+                </details>
             </div>
 
-            <div class="talks-list">
-                <div class="talk-item">
-                    <span class="talk-title">Topological Hochschild Homology with a “Twist”</span>
-                    Honours Conference, ANU, 2025.11
-                </div>
-                <div class="talk-item">
-                    <span class="talk-title">What is... G-stuff?</span>
-                    What is...? Seminar, ANU, 2025.08
-                </div>
-                <div class="talk-item">
-                    <span class="talk-title">Odd Primary Hopf Invariant One</span>
-                    VBKT Seminar, ANU, 2025.06
-                </div>
-                <div class="talk-item">
-                    <span class="talk-title">The Scariest Maths Topics (in 8 minutes)</span>
-                    Maths in the Pub, 2025.05
-                </div>
-                <div class="talk-item">
-                    <span class="talk-title">Levy Integration</span>
-                    Stochastic Analysis & Financial Applications, 2024.11
-                </div>
-                <div class="talk-item">
-                    <span class="talk-title">\( C_2 \)-Equivariance and KR-Theory</span>
-                    Stable Homotopy Theory Seminar, ANU, 2024.06
-                </div>
+            <div class="content-box">
+                <h2 class="project-title">What is... G-stuff?</h2>
+                <div class="project-meta">What is...? Seminar, ANU, 2025.08</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract for G-stuff talk here...]</p>
+                </details>
             </div>
-            
+
+            <div class="content-box">
+                <h2 class="project-title">Odd Primary Hopf Invariant One</h2>
+                <div class="project-meta">VBKT Seminar, ANU, 2025.06</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract for VBKT talk here...]</p>
+                </details>
+            </div>
+
+            <div class="content-box">
+                <h2 class="project-title">The Scariest Maths Topics (in 8 minutes)</h2>
+                <div class="project-meta">Maths in the Pub, 2025.05</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract/description for Maths in the Pub here...]</p>
+                </details>
+            </div>
+
+            <div class="content-box">
+                <h2 class="project-title">Levy Integration</h2>
+                <div class="project-meta">Stochastic Analysis & Financial Applications, 2024.11</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract for Stochastic Analysis talk here...]</p>
+                </details>
+            </div>
+
+            <div class="content-box">
+                <h2 class="project-title">\( C_2 \)-Equivariance and KR-Theory</h2>
+                <div class="project-meta">Stable Homotopy Theory Seminar, ANU, 2024.06</div>
+                <details>
+                    <summary>Explore Abstract</summary>
+                    <p style="margin-top: 10px;">[Insert abstract for Stable Homotopy talk here...]</p>
+                </details>
+            </div>
         </div>
+
     </main>
 
     <footer>
