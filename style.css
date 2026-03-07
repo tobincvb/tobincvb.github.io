@@ -1,12 +1,12 @@
 /* === BASE STYLES & COLOR PALETTE === */
 :root {
-    --bg-color: #fffffb;        /* Requested off-white/warm background */
+    --bg-color: #f1f5f9;        /* Soft slate background to break up the white */
     --text-main: #1e293b;       /* Deep slate for high-contrast readability */
     --heading-color: #0f172a;   /* Darker slate for headings */
     --accent-color: #0284c7;    /* Popping accessible blue */
     --accent-hover: #0369a1;    /* Darker blue for hovers */
     --nav-bg: rgba(255, 255, 255, 0.95);
-    --card-bg: #ffffff;
+    --card-bg: #ffffff;         /* Pure white cards to float above the background */
 }
 
 body {
@@ -114,13 +114,13 @@ nav {
     background: var(--card-bg);
     border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-    border: 1px solid #f1f5f9;
+    border: 1px solid #e2e8f0;
     padding: 40px;
     margin-bottom: 30px;
 }
 
 .contact-box {
-    background: #f0f9ff;
+    background: #e0f2fe; /* Light blue background */
     border: 1px solid #bae6fd;
     border-left: 5px solid var(--accent-color);
     padding: 25px;
@@ -157,6 +157,18 @@ nav {
     box-shadow: 0 6px 10px rgba(2, 132, 199, 0.3);
 }
 
+.btn-secondary {
+    background-color: #e0f2fe; /* Soft blue background instead of white */
+    color: var(--accent-color) !important;
+    border: 1px solid #bae6fd;
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent-color);
+    background-color: #bae6fd;
+    transform: translateY(-2px);
+}
+
 /* === DROPDOWN ABSTRACTS (ACCORDIONS) === */
 details {
     background: var(--bg-color);
@@ -176,7 +188,7 @@ summary {
     font-weight: 600;
     color: var(--accent-color);
     cursor: pointer;
-    list-style: none; /* Hides default arrow in some browsers */
+    list-style: none;
     display: flex;
     align-items: center;
 }
