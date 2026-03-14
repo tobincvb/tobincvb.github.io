@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="style.css">
     <style>
         a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
-        .paper-box { padding: 20px; border-left: 4px solid #0056b3; background: #f9f9fa; border-radius: 0 8px 8px 0; margin-bottom: 25px; }
-        .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: block; margin-bottom: 8px; }
-        .paper-box p { margin: 0 0 10px 0; font-size: 0.95em; }
-        .read-link { font-weight: 600; font-size: 0.9em; }
+        .cv-section { margin-bottom: 40px; }
+        .cv-item { margin-bottom: 25px; }
+        .cv-item h3 { margin-bottom: 5px; }
+        .cv-meta { color: #555; font-size: 0.9em; margin-top: 0; margin-bottom: 10px; font-weight: 500; }
+        .cv-list { padding-left: 20px; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -40,27 +41,152 @@
         <div class="col-main">
             <div class="content-box">
                 
-                <h2>Education</h2>
-                <div style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 5px;">The Australian National University</h3>
-                    <p style="margin: 0;"><strong>B.Sc. (Hons) in Mathematics</strong> | First Class Honours | 2025</p>
-                    <p style="margin: 5px 0 0 0;"><em>Advisor:</em> <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a></p>
-                </div>
-                
-                <div style="margin-bottom: 30px;">
-                    <h3 style="margin-bottom: 5px;">The Australian National University</h3>
-                    <p style="margin: 0;"><strong>B.Sc. in Statistics</strong></p>
+                <div class="cv-section">
+                    <h2>Education</h2>
+                    
+                    <div class="cv-item" style="margin-bottom: 25px;">
+                        <h3>The Australian National University</h3>
+                        <p class="cv-meta">Canberra, Australia | 2021&ndash;2025</p>
+                        <ul class="cv-list">
+                            <li><strong>Bachelor of Mathematical Sciences (Honours)</strong></li>
+                            <li>First Class Honours</li>
+                            <li>Supervisor: Dr. Vigleik Angeltveit</li>
+                            <li>Research area: Equivariant Stable Homotopy Theory</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item" style="margin-bottom: 25px;">
+                        <h3>The Australian National University</h3>
+                        <p class="cv-meta">Canberra, Australia | 2021&ndash;2024</p>
+                        <ul class="cv-list">
+                            <li><strong>Bachelor of Statistics</strong></li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item" style="margin-bottom: 25px;">
+                        <h3>Australian Mathematical Sciences Institute</h3>
+                        <p class="cv-meta">Canberra, Australia | 2023&ndash;2024</p>
+                        <ul class="cv-list">
+                            <li><strong>Summer School 2024</strong></li>
+                        </ul>
+                    </div>
                 </div>
 
-                <h2 style="margin-top: 50px;">Research & Papers</h2>
-                
-                <div class="paper-box">
-                    <a href="thesis.pdf" class="paper-title" target="_blank">Twisted Topological Hochschild Homology (2025)</a>
-                    <p>My Honours thesis exploring equivariant stable homotopy theory and twisted topological cyclic homology.</p>
-                    <a href="thesis.pdf" target="_blank" class="read-link">Read Full Thesis &rarr;</a>
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Research Projects</h2>
+                    
+                    <div class="cv-item">
+                        <h3>Honours Thesis: Twisted Topological Hochschild Homology</h3>
+                        <p class="cv-meta">Australian National University | 2025.01&ndash;2025.11</p>
+                        <ul class="cv-list">
+                            <li>Supervisor: Dr. Vigleik Angeltveit.</li>
+                            <li>Develop a twisted model of <i>p</i>-cyclotomic spectra and twisted TC for C<sub>n</sub>-ring spectra.</li>
+                            <li>Provide a Nikolaus-Scholze style theorem for computing twisted TC.</li>
+                            <li>Provide an identification between norms and twisted cyclic bar constructions.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>Odd Primary Hopf Invariant One</h3>
+                        <p class="cv-meta">Australian National University | 2025.02&ndash;2025.06</p>
+                        <ul class="cv-list">
+                            <li>Survey odd-primary refinements and constraints on Hopf invariant one.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>Lévy Integration</h3>
+                        <p class="cv-meta">Australian National University | 2024.08&ndash;2024.11</p>
+                        <ul class="cv-list">
+                            <li>Construct Lévy-Itô integration for general Lévy processes and compare with Itô integration.</li>
+                            <li>Worked examples for compound Poisson and variance-gamma processes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>Applications of Differential Forms to Homotopy Theory</h3>
+                        <p class="cv-meta">Australian National University | 2024.08&ndash;2024.11</p>
+                        <ul class="cv-list">
+                            <li>Survey rational homotopy theory and differential graded algebras.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>Kervaire Invariant One: C<sub>2</sub>-Equivariance and KR-Theory</h3>
+                        <p class="cv-meta">Australian National University | 2024.02&ndash;2024.06</p>
+                        <ul class="cv-list">
+                            <li>Expository project connecting C<sub>2</sub>-equivariant techniques to the Hill-Hopkins-Ravenel approach.</li>
+                        </ul>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>UMD Spaces</h3>
+                        <p class="cv-meta">Australian National University | 2023.08&ndash;2023.11</p>
+                        <ul class="cv-list">
+                            <li>Expository project on spaces with unconditional martingale differences, and applications to stochastic calculus.</li>
+                        </ul>
+                    </div>
                 </div>
 
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Teaching</h2>
+                    
+                    <div class="cv-item">
+                        <h3>Demonstrator</h3>
+                        <p class="cv-meta">The Australian National University | 2023.07&ndash;2025.11</p>
+                        <ul class="cv-list">
+                            <li>MATH1005: Discrete Mathematical Models (2023.07&ndash;2024.11) - ran workshops, marked assignments, wrote solutions.</li>
+                            <li>MATH2222: Introduction to Mathematical Thinking (2025.02&ndash;2025.06) - ran workshops, marked assignments.</li>
+                            <li>MATH4204: Algebraic Topology (Honours) (2025.07&ndash;2025.11) - marked assignments.</li>
+                        </ul>
+                    </div>
                 </div>
+
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Talks & Presentations</h2>
+                    <ul class="cv-list">
+                        <li><strong>THH with a "Twist"</strong> &ndash; Honours Conference, ANU (2025.11)</li>
+                        <li><strong>What is... G-stuff?</strong> &ndash; What is...? Seminar, ANU (2025.08)</li>
+                        <li><strong>Odd Primary Hopf Invariant One</strong> &ndash; VBKT Seminar, ANU (2025.06)</li>
+                        <li><strong>The Scariest Maths Topics (in 8 minutes)</strong> &ndash; Maths in the Pub (2025.05)</li>
+                        <li><strong>Lévy Integration</strong> &ndash; Stochastic Analysis & Financial Applications (2024.11)</li>
+                        <li><strong>C<sub>2</sub>-Equivariance and KR-Theory</strong> &ndash; Stable Homotopy Theory Seminar, ANU (2024.06)</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Work Experience</h2>
+                    
+                    <div class="cv-item">
+                        <h3>Data Analyst</h3>
+                        <p class="cv-meta">Evolve Capabilities | Canberra, Australia | 2026.01&ndash;Present</p>
+                    </div>
+
+                    <div class="cv-item">
+                        <h3>Configuration Management & Reporting Service Delivery Manager</h3>
+                        <p class="cv-meta">Australian Public Service | Canberra, Australia | 2023.02&ndash;2026.01</p>
+                    </div>
+                </div>
+
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Service & Awards</h2>
+                    <ul class="cv-list">
+                        <li><strong>Co-organiser</strong>, "What is...?" student seminar, ANU (2025).</li>
+                        <li><strong>Caltex Best All Rounder Award</strong> - Presented in recognition of excellence in academic, leadership, sporting and community service activities.</li>
+                        <li><strong>Member</strong> of Australian MENSA.</li>
+                    </ul>
+                </div>
+
+                <div class="cv-section" style="margin-top: 40px;">
+                    <h2>Technical Skills</h2>
+                    <ul class="cv-list">
+                        <li><strong>Programming:</strong> Python, R, MATLAB; Excel</li>
+                        <li><strong>Typesetting:</strong> LaTeX (BibTeX, TikZ, TikZ-cd)</li>
+                        <li><strong>Languages:</strong> English (native); some Chinese</li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
 
         <div class="col-side" style="text-align: center;">
