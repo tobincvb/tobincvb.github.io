@@ -15,11 +15,25 @@
     <link rel="stylesheet" href="style.css">
     <style>
         a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
+        
+        /* Updated Card Container CSS */
         .home-cards { display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
-        .home-card { flex: 1; min-width: 300px; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; }
-        .home-card h2 { margin-top: 0; text-align: center; }
-        .home-card p { text-align: center; color: #555; margin-bottom: 30px; line-height: 1.6; }
-        .card-buttons { display: flex; flex-direction: column; gap: 15px; }
+        .home-card { flex: 1; min-width: 350px; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; display: flex; flex-direction: column; }
+        
+        /* New Inner Card CSS for the Image + Text Layout */
+        .card-top { display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start; }
+        .card-image { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0; }
+        .card-text { text-align: left; }
+        .card-text h2 { margin-top: 0; margin-bottom: 10px; }
+        .card-text p { color: #555; margin: 0; line-height: 1.6; }
+        
+        .card-buttons { display: flex; flex-direction: column; gap: 15px; margin-top: auto; }
+
+        /* Mobile Responsive adjustment to stack image and text on small screens */
+        @media (max-width: 600px) {
+            .card-top { flex-direction: column; align-items: center; }
+            .card-text { text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -29,32 +43,32 @@
             <a href="/" class="logo">Tobin Carlton Van Buizen</a>
             <ul class="nav-links">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="about">About Me</a></li>
-                <li><a href="academic">Academic</a></li>
-                <li><a href="industry">Industry</a></li>
-                <li><a href="talks">Talks</a></li>
-                <li><a href="fun">Fun</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="industry.html">Industry</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="fun.html">Fun</a></li>
             </ul>
         </div>
     </nav>
 
-    <header class="container columns" style="margin-top: 40px; align-items: center;">
-        <div class="col-main page-header" style="margin-top: 0; padding-top: 0;">
-            <h1 style="margin-top: 0;">Tobin Carlton Van Buizen</h1>
-            <p>Mathematics First Class Honours and Statistics Graduate from the Australian National University.</p>
-        </div>
-        
-        <div class="col-side" style="display: flex; gap: 15px; justify-content: flex-end;">
-            <img src="headshot.jpg" alt="Professional Headshot of Tobin Carlton Van Buizen" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); object-fit: cover;">
-            <img src="profile.jpg" alt="Tobin Carlton Van Buizen" style="width: 48%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); object-fit: cover;">
-        </div>
+    <header class="container page-header" style="text-align: center; margin-top: 60px;">
+        <h1 style="font-size: 2.8em; margin-bottom: 15px; margin-top: 0;">Tobin Carlton Van Buizen</h1>
+        <p style="font-size: 1.15em; color: #444; max-width: 700px; margin: 0 auto 25px auto; line-height: 1.6;">
+            Mathematics First Class Honours and Statistics Graduate from the Australian National University.
+        </p>
+        <a href="about.html" class="btn btn-primary" style="display: inline-block;">Learn More About Me</a>
     </header>
 
     <main class="container home-cards">
+        
         <div class="home-card">
-            <div>
-                <h2>Academic</h2>
-                <p>Research in equivariant stable homotopy theory, twisted topological cyclic homology, and pure mathematics.</p>
+            <div class="card-top">
+                <img src="profile.jpg" alt="Tobin at the whiteboard" class="card-image">
+                <div class="card-text">
+                    <h2>Academic</h2>
+                    <p>Research in equivariant stable homotopy theory, twisted topological cyclic homology, and pure mathematics.</p>
+                </div>
             </div>
             <div class="card-buttons">
                 <a href="academic.html" class="btn btn-primary" style="text-align: center;">View Academic Profile</a>
@@ -63,18 +77,22 @@
         </div>
 
         <div class="home-card">
-            <div>
-                <h2>Industry</h2>
-                <p>Expertise in data analytics, statistical modeling, quantitative research, and applied problem solving.</p>
+            <div class="card-top">
+                <img src="headshot.jpg" alt="Professional Headshot" class="card-image">
+                <div class="card-text">
+                    <h2>Industry</h2>
+                    <p>Expertise in data analytics, statistical modeling, quantitative research, and applied problem solving.</p>
+                </div>
             </div>
             <div class="card-buttons">
                 <a href="industry.html" class="btn btn-primary" style="text-align: center;">View Industry Profile</a>
                 <a href="industry-cv.pdf" class="btn btn-secondary" style="text-align: center;">Download Industry CV</a>
             </div>
         </div>
+
     </main>
 
-    <footer style="margin-top: 60px;">
+    <footer style="margin-top: 60px; text-align: center;">
         <p>&copy; 2026 Tobin Carlton Van Buizen. All rights reserved.</p>
     </footer>
 
