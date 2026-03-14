@@ -11,6 +11,24 @@
     
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
+        
+        /* Consistent Box Styling */
+        .paper-box { padding: 20px; border-left: 4px solid #0056b3; background: #f9f9fa; border-radius: 0 8px 8px 0; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: inline-block; margin-top: 0; margin-bottom: 5px; text-decoration: none !important; }
+        .project-meta { color: #555; font-size: 0.9em; margin-bottom: 12px; font-weight: 500; }
+        .paper-box details summary { font-weight: 600; cursor: pointer; margin-top: 5px; color: #333; }
+        .paper-box details p { margin: 10px 0 0 0; font-size: 0.95em; line-height: 1.6; color: #444; }
+
+        /* Mobile Responsive Navigation */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
+            .nav-links li { margin: 0; }
+        }
+    </style>
 </head>
 <body>
 
@@ -19,79 +37,85 @@
             <a href="/" class="logo">Tobin Carlton Van Buizen</a>
             <ul class="nav-links">
                 <li><a href="/">Home</a></li>
-                <li><a href="about">About Me</a></li>
-                <li><a href="academic">Academic</a></li>
-                <li><a href="industry">Industry</a></li>
-                <li><a href="talk" class="active">Talks</a></li>
-                <li><a href="fun">Fun</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="industry.html">Industry</a></li>
+                <li><a href="talks.html" class="active">Talks</a></li>
+                <li><a href="fun.html">Fun</a></li>
             </ul>
         </div>
     </nav>
 
     <header class="page-header container">
-        <h1>Talks</h1>
+        <h1>Talks & Presentations</h1>
     </header>
 
     <main class="container columns">
         
-        <div class="col-side" style="display: flex; flex-direction: column; gap: 20px;">
-            <img src="whiteboard.jpg" alt="Writing math on a whiteboard" style="width: 100%; border-radius: 8px;">
-            <img src="maths-talk.jpg" alt="Giving a talk at Maths in the Pub" style="width: 100%; border-radius: 8px;">
-        </div>
-
         <div class="col-main">
             <div class="content-box">
-                <h2 class="project-title">Topological Hochschild Homology with a “Twist”</h2>
-                <div class="project-meta"><a href="https://maths.anu.edu.au/news-events/events/s2-2025-honours-conference">Honours Conference, ANU, 2025.11</a></div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">We introduce a topological version of Hochschild homology for rings, which turns out to be a "stronger" invariant in some sense. We then extend this to a “twisted” version that takes inputs with a G-action.</p>
-                </details>
-            </div>
+                
+                <div class="paper-box">
+                    <h2 class="paper-title">Topological Hochschild Homology with a “Twist”</h2>
+                    <div class="project-meta"><a href="https://maths.anu.edu.au/news-events/events/s2-2025-honours-conference" target="_blank">Honours Conference, ANU, 2025.11</a></div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>We introduce a topological version of Hochschild homology for rings, which turns out to be a "stronger" invariant in some sense. We then extend this to a “twisted” version that takes inputs with a G-action.</p>
+                    </details>
+                </div>
 
-            <div class="content-box">
-                <h2 class="project-title">What is... G-stuff?</h2>
-                <div class="project-meta"><a href="https://sites.google.com/view/whatis2025/home">What is...? Seminar, ANU, 2025.08</a></div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">Why did we study group theory in Algebra 1? It turns out that many objects admit a group action, and studying these actions can give us more information about the objects. We will explore G-sets, G-spaces and other G-“stuff” through some definitions and lots of examples. Strong understanding of Algebra 1 and Analysis 1 content is required.</p>
-                </details>
-            </div>
+                <div class="paper-box">
+                    <h2 class="paper-title">What is... G-stuff?</h2>
+                    <div class="project-meta"><a href="https://sites.google.com/view/whatis2025/home" target="_blank">What is...? Seminar, ANU, 2025.08</a></div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>Why did we study group theory in Algebra 1? It turns out that many objects admit a group action, and studying these actions can give us more information about the objects. We will explore G-sets, G-spaces and other G-“stuff” through some definitions and lots of examples. Strong understanding of Algebra 1 and Analysis 1 content is required.</p>
+                    </details>
+                </div>
 
-            <div class="content-box">
-                <h2 class="project-title">Odd Primary Hopf Invariant One</h2>
-                <div class="project-meta">VBKT Seminar, ANU, 2025.06</div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">We give a consolidated exposition of the Hopf invariant one problem. At the prime 2 we mention Adams' secondary operation argument, showing that a map \( f \colon S^{2n-1}\to S^n\) with Hopf invariant \(\pm 1\) exists only for \( n=1,2,4,8\). For an odd prime \( p\) we follow the Adams-Atiyah translation into \(K\)-theory and prove that the mod-\( p \) Hopf invariant vanishes as soon as \( n>1 \). The unique surviving cases \( n=1 \) is realised by an explicit map \( S^{2p}\to S^3 \) that we construct in detail.</p>
-                </details>
-            </div>
+                <div class="paper-box">
+                    <h2 class="paper-title">Odd Primary Hopf Invariant One</h2>
+                    <div class="project-meta">VBKT Seminar, ANU, 2025.06</div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>We give a consolidated exposition of the Hopf invariant one problem. At the prime 2 we mention Adams' secondary operation argument, showing that a map \( f \colon S^{2n-1}\to S^n\) with Hopf invariant \(\pm 1\) exists only for \( n=1,2,4,8\). For an odd prime \( p\) we follow the Adams-Atiyah translation into \(K\)-theory and prove that the mod-\( p \) Hopf invariant vanishes as soon as \( n>1 \). The unique surviving cases \( n=1 \) is realised by an explicit map \( S^{2p}\to S^3 \) that we construct in detail.</p>
+                    </details>
+                </div>
 
-            <div class="content-box">
-                <h2 class="project-title">The Scariest Maths Topic (in 8 minutes)</h2>
-                <div class="project-meta">Maths in the Pub, 2025.05</div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">I will teach everyone in the pub the scariest maths topic (in only 8 minutes). To do this, we will learn the "Spectral Sequence Game".</p>
-                </details>
-            </div>
+                <div class="paper-box">
+                    <h2 class="paper-title">The Scariest Maths Topic (in 8 minutes)</h2>
+                    <div class="project-meta">Maths in the Pub, 2025.05</div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>I will teach everyone in the pub the scariest maths topic (in only 8 minutes). To do this, we will learn the "Spectral Sequence Game".</p>
+                    </details>
+                </div>
 
-            <div class="content-box">
-                <h2 class="project-title">Levy Integration</h2>
-                <div class="project-meta">Stochastic Analysis & Financial Applications, 2024.11</div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">We begin by introducing Poisson integration, as well as several related constructions needed to define the Levy integral. We review the Levy-Ito decomposition and show that it further decomposes into a Brownian, a compound Poisson process and a compensated Poisson process. We conclude with the construction of Levy-type stochastic integrals and an application of it to options pricing.</p>
-                </details>
-            </div>
+                <div class="paper-box">
+                    <h2 class="paper-title">Levy Integration</h2>
+                    <div class="project-meta">Stochastic Analysis & Financial Applications, 2024.11</div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>We begin by introducing Poisson integration, as well as several related constructions needed to define the Levy integral. We review the Levy-Ito decomposition and show that it further decomposes into a Brownian, a compound Poisson process and a compensated Poisson process. We conclude with the construction of Levy-type stochastic integrals and an application of it to options pricing.</p>
+                    </details>
+                </div>
 
-            <div class="content-box">
-                <h2 class="project-title">\( C_2 \)-Equivariance and KR-Theory</h2>
-                <div class="project-meta">Stable Homotopy Theory Seminar, ANU, 2024.06</div>
-                <details>
-                    <summary>Abstract</summary>
-                    <p style="margin-top: 10px;">In this work we explain the methods of Hill, Hopkins, and Ravenel in their solution of the Kervaire Invariant One problem. We make the simplification from \(C_8\) to \(C_2 \)-equivariance, describe the computational techniques involved, and talk about what these findings mean. In particular, we use the methods to compute the homotopy groups of \(KR\)-theory.</p>
-                </details>
+                <div class="paper-box">
+                    <h2 class="paper-title">\( C_2 \)-Equivariance and KR-Theory</h2>
+                    <div class="project-meta">Stable Homotopy Theory Seminar, ANU, 2024.06</div>
+                    <details>
+                        <summary>Abstract</summary>
+                        <p>In this work we explain the methods of Hill, Hopkins, and Ravenel in their solution of the Kervaire Invariant One problem. We make the simplification from \(C_8\) to \(C_2 \)-equivariance, describe the computational techniques involved, and talk about what these findings mean. In particular, we use the methods to compute the homotopy groups of \(KR\)-theory.</p>
+                    </details>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-side" style="display: flex; flex-direction: column; gap: 20px;">
+            <div style="position: sticky; top: 20px;">
+                <img src="whiteboard.jpg" alt="Writing math on a whiteboard" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                <img src="maths-talk.jpg" alt="Giving a talk at Maths in the Pub" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
             </div>
         </div>
 
