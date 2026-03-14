@@ -15,6 +15,20 @@
         .cv-item h3 { margin-bottom: 5px; }
         .cv-meta { color: #555; font-size: 0.9em; margin-top: 0; margin-bottom: 10px; font-weight: 500; }
         .cv-list { padding-left: 20px; line-height: 1.6; }
+
+        /* New class for the header layout */
+        .header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            /* Fix Navigation */
+            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
+            .nav-links li { margin: 0; }
+            
+            /* Center header items on mobile */
+            .header-flex { flex-direction: column; justify-content: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -33,7 +47,7 @@
         </div>
     </nav>
 
-    <header class="container page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+    <header class="container page-header header-flex">
         <h1 style="margin: 0;">Industry Curriculum Vitae</h1>
         <a href="industry-cv.pdf" class="btn btn-secondary" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Full Industry CV (PDF)</a>
     </header>
