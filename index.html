@@ -18,7 +18,7 @@
         
         /* Updated Card Container CSS */
         .home-cards { display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
-        .home-card { flex: 1; min-width: 350px; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; display: flex; flex-direction: column; }
+        .home-card { flex: 1; min-width: 350px; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; display: flex; flex-direction: column; box-sizing: border-box; }
         
         /* New Inner Card CSS for the Image + Text Layout */
         .card-top { display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start; }
@@ -27,12 +27,19 @@
         .card-text h2 { margin-top: 0; margin-bottom: 10px; }
         .card-text p { color: #555; margin: 0; line-height: 1.6; }
         
-        .card-buttons { display: flex; flex-direction: column; gap: 15px; margin-top: auto; }
+        /* Button sizing - decreased width and centered */
+        .card-buttons { display: flex; flex-direction: column; gap: 15px; margin-top: auto; align-items: center; }
+        .card-buttons .btn { width: 85%; max-width: 260px; box-sizing: border-box; }
 
-        /* Mobile Responsive adjustment to stack image and text on small screens */
-        @media (max-width: 600px) {
+        /* Mobile Responsive adjustments to prevent cutoff and squishing */
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
+            .nav-links li { margin: 0; }
+            
             .card-top { flex-direction: column; align-items: center; }
             .card-text { text-align: center; }
+            .home-card { min-width: 100%; padding: 30px 20px; }
         }
     </style>
 </head>
