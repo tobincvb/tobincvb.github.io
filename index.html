@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tobin Carlton Van Buizen</title>
-    <meta name="description" content="Academic and professional portfolio of Tobin Carlton Van Buizen. Featuring research in algebraic topology, data analytics, and personal projects.">
+    <meta name="description" content="Academic and professional portfolio of Tobin Carlton Van Buizen.">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
@@ -12,19 +12,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="style.css">
+    <style>
+        a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
+        .home-cards { display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
+        .home-card { flex: 1; min-width: 300px; padding: 40px 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); background: #ffffff; display: flex; flex-direction: column; justify-content: space-between; }
+        .home-card h2 { margin-top: 0; text-align: center; }
+        .home-card p { text-align: center; color: #555; margin-bottom: 30px; }
+        .card-buttons { display: flex; flex-direction: column; gap: 15px; }
+    </style>
 </head>
 <body>
 
     <nav>
         <div class="nav-container">
-            <a href="/" class="logo">Tobin CVB</a>
+            <a href="/" class="logo">Tobin Carlton Van Buizen</a>
             <ul class="nav-links">
                 <li><a href="/" class="active">Home</a></li>
-                <li><a href="research">Research</a></li>
-                <li><a href="talks">Talks</a></li>
-                <li><a href="fun">Fun</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="academic.html">Academic</a></li>
+                <li><a href="industry.html">Industry</a></li>
+                <li><a href="talks.html">Talks</a></li>
+                <li><a href="fun.html">Fun</a></li>
             </ul>
         </div>
     </nav>
@@ -32,36 +41,34 @@
     <header class="container page-header">
         <h1>Tobin Carlton Van Buizen</h1>
         <p>Mathematics First Class Honours and Statistics Graduate from the Australian National University.</p>
-        <p><strong>Research interests:</strong> equivariant stable homotopy theory & THH/TC.<br>
-        <strong>Accelerated entry:</strong> commenced university at 15; completing Honours year at 20.</p>
-        
-        <div style="margin-top: 30px; display: flex; gap: 15px; justify-content: center;">
-            <a href="academic-cv" class="btn btn-primary">Academic CV</a>
-            <a href="industry-cv" class="btn btn-secondary">Industry CV</a>
-        </div>
+        <p><strong>Accelerated entry:</strong> commenced university at 15; completing Honours year at 20.</p>
     </header>
 
-    <main class="container columns">
-        <div class="col-main">
-            <div class="content-box">
-                <h2>About Me</h2>
-                <p>Hi, I'm Tobin. I completed my honours degree in 2025 with First Class Honours under the supervision of <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a>.</p>
-                <p>I have an honours degree in mathematics and a degree in statistics, both from The Australian National University. My thesis, titled <a href="thesis.pdf"><em>'Twisted Topological Hochschild Homology'</em></a>, explored equivariant stable homotopy theory and twisted topological cyclic homology.</p>
-
-                <div class="contact-box" style="margin-top: 40px;">
-                    <h3>Get in Touch</h3>
-                    <p>I am currently applying for PhD programs for a 2026 or 2027 start and am always open to discussing mathematics, research opportunities, or powerlifting.</p>
-                    <p style="overflow-wrap: break-word; word-break: break-word;"><strong>Email:</strong> <a href="mailto:tobin.carltonvanbuizen@anu.edu.au">tobin.carltonvanbuizen@anu.edu.au</a></p>
-                </div>
+    <main class="container home-cards">
+        <div class="home-card">
+            <div>
+                <h2>Academic</h2>
+                <p>Research in equivariant stable homotopy theory, twisted topological cyclic homology, and pure mathematics.</p>
+            </div>
+            <div class="card-buttons">
+                <a href="academic.html" class="btn btn-primary" style="text-align: center;">View Academic Profile</a>
+                <a href="academic-cv.pdf" class="btn btn-secondary" style="text-align: center;">Download Academic CV</a>
             </div>
         </div>
 
-        <div class="col-side">
-            <img src="headshot.jpg" alt="Professional Headshot of Tobin Carlton Van Buizen" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <div class="home-card">
+            <div>
+                <h2>Industry</h2>
+                <p>Expertise in data analytics, statistical modeling, quantitative research, and applied problem solving.</p>
+            </div>
+            <div class="card-buttons">
+                <a href="industry.html" class="btn btn-primary" style="text-align: center;">View Industry Profile</a>
+                <a href="industry-cv.pdf" class="btn btn-secondary" style="text-align: center;">Download Industry CV</a>
+            </div>
         </div>
     </main>
 
-    <footer>
+    <footer style="margin-top: 60px;">
         <p>&copy; 2026 Tobin Carlton Van Buizen. All rights reserved.</p>
     </footer>
 
