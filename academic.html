@@ -19,6 +19,20 @@
         .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: block; margin-bottom: 8px; }
         .paper-box p { margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.5; }
         .read-link { font-weight: 600; font-size: 0.9em; }
+
+        /* New class for the header layout */
+        .header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+
+        /* Mobile Responsive adjustments */
+        @media (max-width: 768px) {
+            /* Fix Navigation */
+            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
+            .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
+            .nav-links li { margin: 0; }
+            
+            /* Center header items on mobile */
+            .header-flex { flex-direction: column; justify-content: center; text-align: center; }
+        }
     </style>
 </head>
 <body>
@@ -37,7 +51,7 @@
         </div>
     </nav>
 
-    <header class="container page-header" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+    <header class="container page-header header-flex">
         <h1 style="margin: 0;">Academic Curriculum Vitae</h1>
         <a href="academic-cv.pdf" class="btn btn-primary" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Full Academic CV (PDF)</a>
     </header>
