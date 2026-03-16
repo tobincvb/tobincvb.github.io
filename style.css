@@ -5,6 +5,7 @@
     --heading-color: #0f172a;   /* Darker slate for headings */
     --accent-color: #0284c7;    /* Popping accessible blue */
     --accent-hover: #0369a1;    /* Darker blue for hovers */
+    --visited-color: #5b21b6;   /* Deep purple for visited links */
     --nav-bg: rgba(255, 255, 255, 0.95);
     --card-bg: #ffffff;         /* Pure white cards to float above the background */
 }
@@ -30,9 +31,19 @@ a {
     transition: color 0.2s ease-in-out;
 }
 
+/* Visited state for regular text links */
+a:visited:not(.btn):not(.nav-links a):not(.logo) {
+    color: var(--visited-color);
+}
+
 a:hover {
     color: var(--accent-hover);
     text-decoration: underline;
+}
+
+/* Ensure visited links still change color on hover */
+a:visited:not(.btn):not(.nav-links a):not(.logo):hover {
+    color: #4c1d95; /* Slightly darker purple on hover */
 }
 
 /* === NAVIGATION === */
