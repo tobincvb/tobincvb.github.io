@@ -14,7 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <style>
-        a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
+        /* Excluded .image-link so the image doesn't get an underline */
+        a:not(.btn):not(.nav-links a):not(.logo):not(.image-link) { text-decoration: underline; text-underline-offset: 3px; }
         
         /* Updated Card Container CSS */
         .home-cards { display: flex; gap: 30px; margin-top: 40px; flex-wrap: wrap; }
@@ -22,7 +23,12 @@
         
         /* New Inner Card CSS for the Image + Text Layout */
         .card-top { display: flex; gap: 25px; margin-bottom: 30px; align-items: flex-start; }
-        .card-image { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); flex-shrink: 0; }
+        
+        /* Added image link styling */
+        .image-link { flex-shrink: 0; display: block; transition: opacity 0.2s ease; }
+        .image-link:hover { opacity: 0.85; }
+        .card-image { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); display: block; }
+        
         .card-text { text-align: left; }
         .card-text h2 { margin-top: 0; margin-bottom: 10px; }
         .card-text p { color: #555; margin: 0; line-height: 1.6; }
@@ -69,28 +75,32 @@
         
         <div class="home-card">
             <div class="card-top">
-                <img src="profile.jpg" alt="Tobin at the whiteboard" class="card-image">
+                <a href="academic" class="image-link">
+                    <img src="profile.jpg" alt="Tobin graduating" class="card-image">
+                </a>
                 <div class="card-text">
                     <h2>Academic</h2>
                     <p>Research in pure mathematics: equivariant stable homotopy theory and topological Hochschild homology.</p>
                 </div>
             </div>
             <div class="card-buttons">
-                <a href="academic.html" class="btn btn-primary" style="text-align: center;">View Academic Profile</a>
+                <a href="academic" class="btn btn-primary" style="text-align: center;">View Academic Profile</a>
                 <a href="academic-cv.pdf" class="btn btn-secondary" style="text-align: center;">Download Academic CV</a>
             </div>
         </div>
 
         <div class="home-card">
             <div class="card-top">
-                <img src="headshot.jpg" alt="Professional Headshot" class="card-image">
+                <a href="industry" class="image-link">
+                    <img src="headshot.jpg" alt="Professional Headshot" class="card-image">
+                </a>
                 <div class="card-text">
                     <h2>Industry</h2>
                     <p>Expertise in data analytics, statistical modelling, quantitative research, and applied problem solving.</p>
                 </div>
             </div>
             <div class="card-buttons">
-                <a href="industry.html" class="btn btn-primary" style="text-align: center;">View Industry Profile</a>
+                <a href="industry" class="btn btn-primary" style="text-align: center;">View Industry Profile</a>
                 <a href="industry-cv.pdf" class="btn btn-secondary" style="text-align: center;">Download Industry CV</a>
             </div>
         </div>
@@ -102,7 +112,7 @@
             <h2 style="margin-top: 0;">About Me</h2>
             <p style="line-height: 1.6;">I hold a double degree in mathematics and statistics from the <a href="https://www.anu.edu.au" target="_blank">Australian National University</a>, graduating in 2025 with First Class Honours. I commenced university at age 15 and completed my Honours year at 20.</p>
             
-            <p style="line-height: 1.6;">My thesis, titled <a href="thesis.pdf"><em>'Twisted Topological Hochschild Homology'</em></a>, explored equivariant stable homotopy theory and twisted topological cyclic homology under the supervision of <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a>.</p>
+            <p style="line-height: 1.6;">My thesis, titled '<a href="thesis.pdf"><em>Twisted Topological Hochschild Homology</em></a>', explored equivariant stable homotopy theory and twisted topological cyclic homology under the supervision of <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a>.</p>
             
             <p style="line-height: 1.6;">Currently, I am working as a Data Analyst at <a href="https://evolvecapabilities.com" target="_blank">Evolve Capabilities</a>, applying my quantitative and analytical skills to solve complex problems in an industry setting.</p>
 
