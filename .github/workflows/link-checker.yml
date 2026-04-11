@@ -22,9 +22,11 @@ jobs:
             --no-progress
             --accept 200,201,204,301,302,403,429
             --exclude-loopback
+            --exclude-path "*.html"
             --exclude "mailto:"
             --exclude "https://fonts.googleapis.com"
             --exclude "https://fonts.gstatic.com"
+            --scheme https
             '*.html'
           fail: true
         env:
