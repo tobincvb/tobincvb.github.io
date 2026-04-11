@@ -1,13 +1,13 @@
 /* === BASE STYLES & COLOR PALETTE === */
 :root {
-–bg-color: #f1f5f9;        /* Soft slate background to break up the white */
-–text-main: #1e293b;       /* Deep slate for high-contrast readability */
-–heading-color: #0f172a;   /* Darker slate for headings */
-–accent-color: #0284c7;    /* Popping accessible blue */
-–accent-hover: #0369a1;    /* Darker blue for hovers */
-–visited-color: #5b21b6;   /* Deep purple for visited links */
+–bg-color: #f1f5f9;
+–text-main: #1e293b;
+–heading-color: #0f172a;
+–accent-color: #0284c7;
+–accent-hover: #0369a1;
+–visited-color: #5b21b6;
 –nav-bg: rgba(255, 255, 255, 0.95);
-–card-bg: #ffffff;         /* Pure white cards to float above the background */
+–card-bg: #ffffff;
 }
 
 body {
@@ -31,19 +31,17 @@ text-decoration: none;
 transition: color 0.2s ease-in-out;
 }
 
-/* Visited state for regular text links */
 a:visited:not(.btn):not(.nav-links a):not(.logo) {
 color: var(–visited-color);
 }
 
 a:hover {
 color: var(–accent-hover);
-text-decoration: underline;
+text-decoration: none;
 }
 
-/* Ensure visited links still change color on hover */
 a:visited:not(.btn):not(.nav-links a):not(.logo):hover {
-color: #4c1d95; /* Slightly darker purple on hover */
+color: #4c1d95;
 }
 
 /* === NAVIGATION === */
@@ -59,16 +57,24 @@ z-index: 100;
 .nav-container {
 max-width: 1000px;
 margin: 0 auto;
-padding: 18px 20px;
+padding: 22px 20px;
 display: flex;
 justify-content: space-between;
 align-items: center;
 }
 
+/* Logo — black, only changes on hover */
 .logo {
 font-size: 1.25rem;
 font-weight: 700;
 letter-spacing: -0.5px;
+color: var(–heading-color);
+text-decoration: none;
+}
+
+.logo:hover {
+color: var(–accent-color);
+text-decoration: none;
 }
 
 .nav-links {
@@ -79,13 +85,17 @@ display: flex;
 gap: 25px;
 }
 
+/* Nav links — black by default, blue only on hover/active */
 .nav-links li a {
-color: var(–text-main);
+color: var(–heading-color);
 font-weight: 500;
+text-decoration: none;
 }
 
-.nav-links li a:hover, .nav-links li a.active {
+.nav-links li a:hover,
+.nav-links li a.active {
 color: var(–accent-color);
+text-decoration: none;
 }
 
 /* === LAYOUT UTILITIES === */
@@ -105,20 +115,14 @@ font-size: 2.5rem;
 letter-spacing: -1px;
 }
 
-/* Flex Columns */
 .columns {
 display: flex;
 gap: 40px;
 align-items: flex-start;
 }
 
-.col-main {
-flex: 2;
-}
-
-.col-side {
-flex: 1;
-}
+.col-main { flex: 2; }
+.col-side  { flex: 1; }
 
 /* === CARDS & BOXES === */
 .content-box {
@@ -131,7 +135,7 @@ margin-bottom: 30px;
 }
 
 .contact-box {
-background: #e0f2fe; /* Light blue background */
+background: #e0f2fe;
 border: 1px solid #bae6fd;
 border-left: 5px solid var(–accent-color);
 padding: 25px;
@@ -142,6 +146,69 @@ margin-top: 40px;
 .contact-box h3 {
 margin-top: 0;
 color: var(–accent-color);
+}
+
+/* === HOME CARDS === */
+.home-cards {
+display: flex;
+gap: 30px;
+flex-wrap: wrap;
+margin-bottom: 30px;
+}
+
+.home-card {
+flex: 1 1 42%;
+min-width: min(100%, 320px);
+padding: 35px 30px;
+border-radius: 12px;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+background: var(–card-bg);
+border: 1px solid #e2e8f0;
+display: flex;
+flex-direction: column;
+}
+
+.card-top {
+display: flex;
+gap: 20px;
+margin-bottom: 25px;
+align-items: flex-start;
+}
+
+.image-link {
+flex-shrink: 0;
+display: block;
+text-decoration: none;
+transition: opacity 0.2s ease;
+}
+
+.image-link:hover { opacity: 0.85; }
+
+.card-image {
+width: 110px;
+height: 110px;
+object-fit: cover;
+border-radius: 8px;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+display: block;
+}
+
+.card-text { text-align: left; }
+.card-text h2 { margin-top: 0; margin-bottom: 8px; }
+.card-text p  { color: #64748b; margin: 0; font-size: 0.95rem; }
+
+.card-buttons {
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin-top: auto;
+align-items: center;
+}
+
+.card-buttons .btn {
+width: 85%;
+max-width: 260px;
+text-align: center;
 }
 
 /* === BUTTONS === */
@@ -166,10 +233,11 @@ box-shadow: 0 4px 6px rgba(2, 132, 199, 0.2);
 background-color: var(–accent-hover);
 transform: translateY(-2px);
 box-shadow: 0 6px 10px rgba(2, 132, 199, 0.3);
+color: white !important;
 }
 
 .btn-secondary {
-background-color: #e0f2fe; /* Soft blue background instead of white */
+background-color: #e0f2fe;
 color: var(–accent-color) !important;
 border: 1px solid #bae6fd;
 }
@@ -178,6 +246,34 @@ border: 1px solid #bae6fd;
 border-color: var(–accent-color);
 background-color: #bae6fd;
 transform: translateY(-2px);
+}
+
+/* === CV PAGE === */
+.cv-section   { margin-bottom: 40px; }
+.cv-item      { margin-bottom: 25px; }
+.cv-item h3   { margin-bottom: 5px; }
+
+.cv-meta {
+color: #64748b;
+font-size: 0.875rem;
+margin-top: 0;
+margin-bottom: 10px;
+font-weight: 500;
+}
+
+.cv-list {
+padding-left: 20px;
+line-height: 1.75;
+}
+
+.cv-list li { margin-bottom: 5px; }
+
+.header-flex {
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-wrap: wrap;
+gap: 20px;
 }
 
 /* === DROPDOWN ABSTRACTS (ACCORDIONS) === */
@@ -213,11 +309,9 @@ font-size: 1.2rem;
 transition: transform 0.2s ease;
 }
 
-details[open] summary::before {
-content: ‘-’;
-}
+details[open] summary::before { content: ‘-’; }
 
-/* === SPECIFIC PAGE TWEAKS === */
+/* === PROJECT CARDS === */
 .project-title {
 font-size: 1.3rem;
 margin: 0 0 5px 0;
@@ -228,9 +322,7 @@ color: var(–heading-color);
 text-decoration: none;
 }
 
-.project-title a:hover {
-color: var(–accent-color);
-}
+.project-title a:hover { color: var(–accent-color); }
 
 .project-meta {
 font-size: 0.95rem;
@@ -249,11 +341,38 @@ border-top: 1px solid #e2e8f0;
 
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
-.columns {
-flex-direction: column;
-}
+.columns { flex-direction: column; }
+
+
 .nav-container {
-flex-direction: column;
-gap: 15px;
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
 }
+
+.nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.home-card {
+    min-width: 100%;
+    padding: 25px 20px;
+}
+
+.card-top {
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-text { text-align: center; }
+
+.content-box { padding: 25px 20px; }
+
+.header-flex {
+    flex-direction: column;
+    text-align: center;
+}
+
 }
