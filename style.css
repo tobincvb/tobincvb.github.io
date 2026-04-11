@@ -1,20 +1,20 @@
 /* === BASE STYLES & COLOR PALETTE === */
 :root {
-–bg-color: #f1f5f9;
-–text-main: #1e293b;
-–heading-color: #0f172a;
-–accent-color: #0284c7;
-–accent-hover: #0369a1;
-–visited-color: #5b21b6;
-–nav-bg: rgba(255, 255, 255, 0.95);
-–card-bg: #ffffff;
+--bg-color: #f1f5f9;
+--text-main: #1e293b;
+--heading-color: #0f172a;
+--accent-color: #0284c7;
+--accent-hover: #0369a1;
+--visited-color: #5b21b6;
+--nav-bg: rgba(255, 255, 255, 0.95);
+--card-bg: #ffffff;
 }
 
 body {
 font-family: ‘Inter’, sans-serif;
 line-height: 1.7;
-color: var(–text-main);
-background-color: var(–bg-color);
+color: var(--text-main);
+background-color: var(--bg-color);
 margin: 0;
 padding: 0;
 -webkit-font-smoothing: antialiased;
@@ -22,21 +22,21 @@ padding: 0;
 
 h1, h2, h3, .logo {
 font-family: ‘Lato’, sans-serif;
-color: var(–heading-color);
+color: var(--heading-color);
 }
 
 a {
-color: var(–accent-color);
+color: var(--accent-color);
 text-decoration: none;
 transition: color 0.2s ease-in-out;
 }
 
 a:visited:not(.btn):not(.nav-links a):not(.logo) {
-color: var(–visited-color);
+color: var(--visited-color);
 }
 
 a:hover {
-color: var(–accent-hover);
+color: var(--accent-hover);
 text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ color: #4c1d95;
 
 /* === NAVIGATION === */
 nav {
-background-color: var(–nav-bg);
+background-color: var(--nav-bg);
 backdrop-filter: blur(10px);
 border-bottom: 1px solid #e2e8f0;
 position: sticky;
@@ -68,12 +68,12 @@ align-items: center;
 font-size: 1.25rem;
 font-weight: 700;
 letter-spacing: -0.5px;
-color: var(–heading-color);
+color: var(--heading-color);
 text-decoration: none;
 }
 
 .logo:hover {
-color: var(–accent-color);
+color: var(--accent-color);
 text-decoration: none;
 }
 
@@ -87,14 +87,14 @@ gap: 25px;
 
 /* Nav links — black by default, blue only on hover/active */
 .nav-links li a {
-color: var(–heading-color);
+color: var(--heading-color);
 font-weight: 500;
 text-decoration: none;
 }
 
 .nav-links li a:hover,
 .nav-links li a.active {
-color: var(–accent-color);
+color: var(--accent-color);
 text-decoration: none;
 }
 
@@ -126,7 +126,7 @@ align-items: flex-start;
 
 /* === CARDS & BOXES === */
 .content-box {
-background: var(–card-bg);
+background: var(--card-bg);
 border-radius: 12px;
 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 border: 1px solid #e2e8f0;
@@ -137,7 +137,7 @@ margin-bottom: 30px;
 .contact-box {
 background: #e0f2fe;
 border: 1px solid #bae6fd;
-border-left: 5px solid var(–accent-color);
+border-left: 5px solid var(--accent-color);
 padding: 25px;
 border-radius: 8px;
 margin-top: 40px;
@@ -145,7 +145,7 @@ margin-top: 40px;
 
 .contact-box h3 {
 margin-top: 0;
-color: var(–accent-color);
+color: var(--accent-color);
 }
 
 /* === HOME CARDS === */
@@ -162,7 +162,7 @@ min-width: min(100%, 320px);
 padding: 35px 30px;
 border-radius: 12px;
 box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
-background: var(–card-bg);
+background: var(--card-bg);
 border: 1px solid #e2e8f0;
 display: flex;
 flex-direction: column;
@@ -223,14 +223,14 @@ cursor: pointer;
 }
 
 .btn-primary {
-background-color: var(–accent-color);
+background-color: var(--accent-color);
 color: white !important;
-border: 1px solid var(–accent-color);
+border: 1px solid var(--accent-color);
 box-shadow: 0 4px 6px rgba(2, 132, 199, 0.2);
 }
 
 .btn-primary:hover {
-background-color: var(–accent-hover);
+background-color: var(--accent-hover);
 transform: translateY(-2px);
 box-shadow: 0 6px 10px rgba(2, 132, 199, 0.3);
 color: white !important;
@@ -238,12 +238,12 @@ color: white !important;
 
 .btn-secondary {
 background-color: #e0f2fe;
-color: var(–accent-color) !important;
+color: var(--accent-color) !important;
 border: 1px solid #bae6fd;
 }
 
 .btn-secondary:hover {
-border-color: var(–accent-color);
+border-color: var(--accent-color);
 background-color: #bae6fd;
 transform: translateY(-2px);
 }
@@ -278,7 +278,7 @@ gap: 20px;
 
 /* === DROPDOWN ABSTRACTS (ACCORDIONS) === */
 details {
-background: var(–bg-color);
+background: var(--bg-color);
 border: 1px solid #e2e8f0;
 border-radius: 6px;
 padding: 12px 20px;
@@ -293,7 +293,7 @@ box-shadow: inset 0 2px 4px rgba(0,0,0,0.02);
 
 summary {
 font-weight: 600;
-color: var(–accent-color);
+color: var(--accent-color);
 cursor: pointer;
 list-style: none;
 display: flex;
@@ -318,11 +318,11 @@ margin: 0 0 5px 0;
 }
 
 .project-title a {
-color: var(–heading-color);
+color: var(--heading-color);
 text-decoration: none;
 }
 
-.project-title a:hover { color: var(–accent-color); }
+.project-title a:hover { color: var(--accent-color); }
 
 .project-meta {
 font-size: 0.95rem;
