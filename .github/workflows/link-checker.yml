@@ -11,7 +11,7 @@ jobs:
 check-links:
 runs-on: ubuntu-latest
 
-``
+
 steps:
   - name: Checkout repository
     uses: actions/checkout@v4
@@ -39,4 +39,4 @@ steps:
       name: link-check-report
       path: lychee/out.md
       retention-days: 30
-``
+
