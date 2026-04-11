@@ -1,0 +1,47 @@
+
+name: Link Checker
+
+on:
+push:
+branches: [main]
+schedule:
+# Every Monday at 8:00am UTC
+- cron: ‘0 8 * * 1’
+workflow_dispatch: # also allows manual trigger from the Actions tab
+
+jobs:
+check-links:
+runs-on: ubuntu-latest
+name: Check for broken links
+
+
+steps:
+  - name: Checkout repository
+    uses: actions/checkout@v4
+
+  - name: Run link checker (lychee)
+    uses: lycheeverse/lychee-action@v2
+    with:
+      # Check all HTML files in the repo root
+      args: >
+        --verbose
+        --no-progress
+        --accept 200,201,204,301,302,403,429
+        --exclude-loopback
+        --exclude "mailto:"
+        --exclude "https://fonts.googleapis.com"
+        --exclude "https://fonts.gstatic.com"
+        '*.html'
+      # Fail the workflow (triggering email) if broken links are found
+      fail: true
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Optional: upload a report as a downloadable artifact for debugging
+  - name: Upload link check report
+    if: always()
+    uses: actions/upload-artifact@v4
+    with:
+      name: link-check-report
+      path: lychee/out.md
+      retention-days: 30
