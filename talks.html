@@ -11,20 +11,16 @@
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lato:wght@400;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="style.css">    
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
     <style>
-        a:not(.btn):not(.nav-links a):not(.logo) { text-decoration: underline; text-underline-offset: 3px; }
-        
         /* Consistent Box Styling */
-        .paper-box { padding: 20px; border-left: 4px solid #0056b3; background: #f9f9fa; border-radius: 0 8px 8px 0; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
-        .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: inline-block; margin-top: 0; margin-bottom: 5px; text-decoration: none !important; }
+        .paper-box { padding: 20px; border-left: 4px solid var(--accent-color); background: #f0f9ff; border-radius: 0 8px 8px 0; margin-bottom: 25px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: inline-block; margin-top: 0; margin-bottom: 5px; text-decoration: none !important; }.paper-title:hover { color: var(--accent-color); }
         .project-meta { color: #555; font-size: 0.9em; margin-bottom: 12px; font-weight: 500; }
-        .paper-box details summary { font-weight: 600; cursor: pointer; margin-top: 5px; color: #333; }
+        .paper-box details summary { font-weight: 600; cursor: pointer; margin-top: 5px; color: var(--accent-color); }
         .paper-box details p { margin: 10px 0 0 0; font-size: 0.95em; line-height: 1.6; color: #444; }
 
         /* Mobile Responsive Navigation */
@@ -32,6 +28,7 @@
             .nav-container { flex-direction: column; gap: 15px; text-align: center; }
             .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
             .nav-links li { margin: 0; }
+            .col-side { display: none; }
         }
     </style>
 </head>
