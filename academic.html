@@ -23,24 +23,21 @@
         .paper-title { font-size: 1.2em; font-weight: 600; color: #0056b3; display: block; margin-bottom: 8px; }
         .paper-box p { margin: 0 0 10px 0; font-size: 0.95em; line-height: 1.5; }
         .read-link { font-weight: 600; font-size: 0.9em; }
-
         /* New class for the header layout */
         .header-flex { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-
         /* Mobile Responsive adjustments */
         @media (max-width: 768px) {
             /* Fix Navigation */
             .nav-container { flex-direction: column; gap: 15px; text-align: center; }
             .nav-links { flex-wrap: wrap; justify-content: center; gap: 12px; padding: 0; width: 100%; box-sizing: border-box; }
             .nav-links li { margin: 0; }
-            
+
             /* Center header items on mobile */
             .header-flex { flex-direction: column; justify-content: center; text-align: center; }
         }
     </style>
 </head>
 <body>
-
     <nav>
         <div class="nav-container">
             <a href="/" class="logo">Tobin Carlton Van Buizen</a>
@@ -53,18 +50,23 @@
             </ul>
         </div>
     </nav>
-
     <header class="container page-header header-flex">
         <h1 style="margin: 0;">Academic Curriculum Vitae</h1>
         <a href="academic-cv.pdf" class="btn btn-primary" style="box-shadow: 0 4px 6px rgba(0,0,0,0.1);">Download Full Academic CV (PDF)</a>
     </header>
-
     <main class="container">
         <div class="content-box">
-            
+
+            <div class="cv-section" style="margin-bottom: 30px;">
+                <p style="margin: 0; line-height: 1.6;">
+                    Mathematics Honours and Statistics, Australian National University.<br>
+                    Research interests: equivariant stable homotopy theory &amp; THH/TC.<br>
+                    Accelerated entry: commenced university at 15; completed Honours year at 20.
+                </p>
+            </div>
             <div class="cv-section">
                 <h2>Education</h2>
-                
+
                 <div class="cv-item" style="margin-bottom: 25px;">
                     <h3>The Australian National University</h3>
                     <p class="cv-meta">Canberra, Australia | 2021 &ndash; 2025</p>
@@ -73,79 +75,74 @@
                         <li>First Class Honours</li>
                         <li>Supervisor: <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a></li>
                         <li>Research area: Equivariant Stable Homotopy Theory</li>
-                        <li><a href="courselist.pdf">Descriptive Courselist (PDF)</a></li>
+                        <li>Descriptive course list (upper-division/graduate): <a href="courselist.pdf">available here (PDF)</a></li>
                     </ul>
                 </div>
-
                 <div class="cv-item" style="margin-bottom: 25px;">
                     <h3>The Australian National University</h3>
                     <p class="cv-meta">Canberra, Australia | 2021 &ndash; 2024</p>
                     <ul class="cv-list">
                         <li><strong>Bachelor of Statistics</strong></li>
-                        <li><a href="courselist.pdf">Descriptive Courselist (PDF)</a></li>
+                        <li>Descriptive course list (upper-division/graduate): <a href="courselist.pdf">available here (PDF)</a></li>
                     </ul>
                 </div>
-
                 <div class="cv-item" style="margin-bottom: 25px;">
-                    <h3><a href="https://amsi.org.au/events/event/amsi-summer-school-2024/" target="_blank">Australian Mathematical Sciences Institute</a></h3>
+                    <h3>Australian Mathematical Sciences Institute</h3>
                     <p class="cv-meta">Canberra, Australia | 2023 &ndash; 2024</p>
                     <ul class="cv-list">
-                        <li><strong>Summer School 2024</strong></li>
-                        <li><a href="courselist.pdf">Descriptive Courselist (PDF)</a></li>
+                        <li><strong><a href="https://amsi.org.au/events/event/amsi-summer-school-2024/" target="_blank">Summer School 2024</a></strong></li>
+                        <li>Descriptive course list: <a href="courselist.pdf">available here (PDF)</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="cv-section" style="margin-top: 40px;">
-                <h2>Research & Papers</h2>
-                
+                <h2>Research Projects</h2>
+
                 <div class="paper-box">
                     <a href="thesis.pdf" class="paper-title" target="_blank">Twisted Topological Hochschild Homology (2025)</a>
-                    <p>My Honours thesis exploring equivariant stable homotopy theory and twisted topological cyclic homology. Develops a twisted model of <i>p</i>-cyclotomic spectra and provides an identification between norms and twisted cyclic bar constructions.</p>
+                    <p>My Honours thesis in equivariant stable homotopy theory, supervised by <a href="https://maths.anu.edu.au/people/vigleik-angeltveit" target="_blank">Dr. Vigleik Angeltveit</a>. Develops a twisted model of <i>p</i>-cyclotomic spectra and twisted TC for <i>C<sub>n</sub></i>-ring spectra, provides a Nikolaus&ndash;Scholze style theorem for computing twisted TC, and gives an identification between norms and twisted cyclic bar constructions.</p>
                     <a href="thesis.pdf" target="_blank" class="read-link">Read Full Thesis &rarr;</a>
                 </div>
-
                 <div class="paper-box">
-                    <a href="hopf-invariant.pdf" class="paper-title" target="_blank">Odd Primary Hopf Invariant One</a>
-                    <p>Vector Bundles and K Theory Report: Exposition and seminar talk on the Hopf Invariant one problem, extending the maps from Steenrod squares to Steenrod powers to give an odd Hopf Invariant.</p>
+                    <a href="hopf-invariant.pdf" class="paper-title" target="_blank">Odd Primary Hopf Invariant One (2025)</a>
+                    <p>Report and seminar talk surveying odd-primary refinements and constraints on Hopf invariant one.</p>
                     <a href="hopf-invariant.pdf" target="_blank" class="read-link">Read Report &rarr;</a>
                 </div>
-
                 <div class="paper-box">
-                    <a href="differential-forms.pdf" class="paper-title" target="_blank">Applications of Differential Forms to Homotopy Theory</a>
-                    <p>Differential Forms in Algebraic Topology Report: An extensive report detailing relevant background including homotopy theory and differential forms basics. Explores the relationship between the two topics through differential graded algebras and minimal models.</p>
-                    <a href="differential-forms.pdf" target="_blank" class="read-link">Read Report &rarr;</a>
-                </div>
-
-                <div class="paper-box">
-                    <a href="levy-integration.pdf" class="paper-title" target="_blank">Lévy Integration</a>
-                    <p>Stochastic Analysis Report: Report and seminar talk discussing Poisson integration, Lévy-Itô decomposition and Lévy stochastic integrals, detailing a worked example and financial applications.</p>
+                    <a href="levy-integration.pdf" class="paper-title" target="_blank">L&eacute;vy Integration (2024)</a>
+                    <p>Constructs L&eacute;vy&ndash;It&ocirc; integration for general L&eacute;vy processes and compares it with It&ocirc; integration, with worked examples for compound Poisson and variance-gamma processes.</p>
                     <a href="levy-integration.pdf" target="_blank" class="read-link">Read Report &rarr;</a>
                 </div>
-
                 <div class="paper-box">
-                    <a href="kervaire-invariant.pdf" class="paper-title" target="_blank">C<sub>2</sub> Equivariance and KR Theory</a>
-                    <p>Stable Homotopy Theory Report: An extensive exposition and seminar talk providing relevant background including equivariant and equivariant stable homotopy theory basics, the slice spectral sequence, to then give specific computations for KR theory.</p>
+                    <a href="differential-forms.pdf" class="paper-title" target="_blank">Applications of Differential Forms to Homotopy Theory (2024)</a>
+                    <p>Surveys rational homotopy theory and differential graded algebras.</p>
+                    <a href="differential-forms.pdf" target="_blank" class="read-link">Read Report &rarr;</a>
+                </div>
+                <div class="paper-box">
+                    <a href="kervaire-invariant.pdf" class="paper-title" target="_blank">Kervaire Invariant One: C<sub>2</sub>-Equivariance and KR-Theory (2024)</a>
+                    <p>Expository project connecting C<sub>2</sub>-equivariant techniques to the Hill&ndash;Hopkins&ndash;Ravenel approach.</p>
                     <a href="kervaire-invariant.pdf" target="_blank" class="read-link">Read Report &rarr;</a>
                 </div>
-
+                <div class="paper-box">
+                    <span class="paper-title" style="color: inherit;">UMD Spaces (2023)</span>
+                    <p>Expository project on spaces with unconditional martingale differences, and applications to stochastic calculus.</p>
+                </div>
             </div>
-
             <div class="cv-section" style="margin-top: 40px;">
                 <h2>Teaching</h2>
-                
+
                 <div class="cv-item">
                     <h3>Demonstrator</h3>
                     <p class="cv-meta">The Australian National University | July 2023 &ndash; Current</p>
                     <ul class="cv-list">
-                        <li><a href="https://programsandcourses.anu.edu.au/2024/course/math1005" target="_blank">MATH1005: Discrete Mathematical Models</a> (July 2023 &ndash; Nov 2024) - ran workshops, marked assignments, wrote solutions.</li>
-                        <li><a href="https://programsandcourses.anu.edu.au/2026/course/math1115" target="_blank">MATH1115: Advanced Mathematics and Applications 1</a> (Feb 2026 &ndash; Current) - running workshops, marking assignments and exams.</li>
-                        <li><a href="https://programsandcourses.anu.edu.au/2025/course/math2222" target="_blank">MATH2222: Introduction to Mathematical Thinking: Problem-Solving and Proofs</a> (Feb 2025 &ndash; June 2026) - ran workshops, marked assignments.</li>
-                        <li><a href="https://programsandcourses.anu.edu.au/2025/course/math4204" target="_blank">MATH4204: Algebraic Topology (Honours)</a> (July 2025 &ndash; Nov 2025) - marked assignments.</li>
+                        <li><a href="https://programsandcourses.anu.edu.au/2024/course/math1005" target="_blank">MATH1005: Discrete Mathematical Models</a> (July 2023 &ndash; Nov 2024) - ran workshops, marked assignments and exams, and wrote solutions.</li>
+                        <li><a href="https://programsandcourses.anu.edu.au/2026/course/math1115" target="_blank">MATH1115: Advanced Mathematics and Applications 1</a> (Feb 2026 &ndash; June 2026) - running workshops, marking assignments and exams.</li>
+                        <li><a href="https://programsandcourses.anu.edu.au/2025/course/math2222" target="_blank">MATH2222: Introduction to Mathematical Thinking: Problem-Solving and Proofs</a> (Feb 2025 &ndash; June 2025) - ran workshops, marked assignments and exams.</li>
+                        <li><a href="https://programsandcourses.anu.edu.au/2025/course/math4204" target="_blank">MATH4204: Algebraic Topology (Honours)</a> (July 2025 &ndash; Current) - marked assignments.</li>
+                        <li><a href="https://maths.anu.edu.au/current-students/student-support#maths-drop-in-sessions" target="_blank">MSI Drop-In Help Centre</a> (Aug 2026 &ndash; Current) - answering questions from students in all MATH courses at ANU, primarily first and second year.</li>
                     </ul>
                 </div>
             </div>
-
             <div class="cv-section" style="margin-top: 40px;">
                 <h2>Talks & Presentations</h2>
                 <ul class="cv-list">
@@ -153,49 +150,47 @@
                     <li><strong>What is... G-stuff?</strong> &ndash; <a href="https://sites.google.com/view/whatis2025/home" target="_blank">What is...? Seminar, ANU</a> (Aug 2025)</li>
                     <li><strong>Odd Primary Hopf Invariant One</strong> &ndash; VBKT Seminar, ANU (June 2025)</li>
                     <li><strong>The Scariest Maths Topics (in 8 minutes)</strong> &ndash; <a href="https://philuponscience.com.au/event/maths-in-pub/" target="_blank">Maths in the Pub</a> (May 2025)</li>
-                    <li><strong>Lévy Integration</strong> &ndash; Stochastic Analysis & Financial Applications (Nov 2024)</li>
+                    <li><strong>L&eacute;vy Integration</strong> &ndash; Stochastic Analysis &amp; Financial Applications (Nov 2024)</li>
                     <li><strong>C<sub>2</sub>-Equivariance and KR-Theory</strong> &ndash; Stable Homotopy Theory Seminar, ANU (June 2024)</li>
                 </ul>
             </div>
-
+            <div class="cv-section" style="margin-top: 40px;">
+                <h2>Service</h2>
+                <ul class="cv-list">
+                    <li><strong>Co-organiser</strong>, <a href="https://sites.google.com/view/whatis2025" target="_blank">"What is...?" student seminar</a>, ANU (2025).</li>
+                </ul>
+            </div>
             <div class="cv-section" style="margin-top: 40px;">
                 <h2>Work Experience</h2>
-                
+
                 <div class="cv-item">
                     <h3>Data Analyst</h3>
                     <p class="cv-meta"><a href="https://evolvecapabilities.com" target="_blank">Evolve Capabilities</a> | Canberra, Australia | Jan 2026 &ndash; Current</p>
                 </div>
-
                 <div class="cv-item">
                     <h3>Configuration Management & Reporting Service Delivery Manager</h3>
                     <p class="cv-meta">Australian Public Service | Canberra, Australia | Feb 2023 &ndash; Jan 2026</p>
                 </div>
             </div>
-
-            <div class="cv-section" style="margin-top: 40px;">
-                <h2>Service & Awards</h2>
-                <ul class="cv-list">
-                    <li><strong>Co-organiser</strong>, <a href="https://sites.google.com/view/whatis2025" target="_blank">"What is...?" student seminar</a>, ANU (2025).</li>
-                    <li><strong><a href="https://www.ampol.com.au/about-ampol/who-we-are/ampol-best-all-rounder" target="_blank">Caltex Best All Rounder Award</a></strong> - Presented in recognition of excellence in academic, leadership, sporting and community service activities.</li>
-                    <li><strong>Member</strong> of <a href="https://www.mensa.org.au/about-us/our-association" target="_blank">MENSA Australia</a>.</li>
-                </ul>
-            </div>
-
             <div class="cv-section" style="margin-top: 40px;">
                 <h2>Technical Skills</h2>
                 <ul class="cv-list">
-                    <li><strong>Programming:</strong> Python, R, MATLAB, HTML, CSS, JavaScript; SQL, Excel, PowerBI, PowerQuery</li>
+                    <li><strong>Programming:</strong> Python, R, MATLAB, HTML, CSS; SQL, Excel, PowerBI, PowerQuery</li>
                     <li><strong>Typesetting:</strong> LaTeX (BibTeX, TikZ, TikZ-cd)</li>
                     <li><strong>Languages:</strong> English (native); some Chinese</li>
                 </ul>
             </div>
-
+            <div class="cv-section" style="margin-top: 40px;">
+                <h2>Awards</h2>
+                <ul class="cv-list">
+                    <li><strong><a href="https://www.ampol.com.au/about-ampol/who-we-are/ampol-best-all-rounder" target="_blank">Caltex Best All Rounder Award</a></strong> - Presented in recognition of excellence in academic, leadership, sporting and community service activities.</li>
+                    <li><strong>Member</strong> of <a href="https://www.mensa.org.au/about-us/our-association" target="_blank">MENSA Australia</a>.</li>
+                </ul>
+            </div>
         </div>
     </main>
-
     <footer>
         <p>&copy; 2026 Tobin Carlton Van Buizen. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
